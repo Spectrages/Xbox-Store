@@ -1,0 +1,10 @@
+.Header{
+    justify-content: space-around;
+    display: flex;
+}
+.Footer{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    font-size: 36px;
+}
