@@ -1,20 +1,27 @@
 import React from 'react';
-import './App.css'
+import classes from './App.module.scss'
 import {Route, Routes} from "react-router-dom"
-import { HomePage } from "./pages/HeaderPages/HomePage";
+import { HomePage } from "./pages/HeaderPages/HomePage/HomePage";
 import { ConsolesPage } from "./pages/HeaderPages/ConsolesPage";
 import { AccessoriesPage }from "./pages/HeaderPages/AccessoriesPage";
 import { GamesPage } from "./pages/HeaderPages/GamesPage";
 import { BlogPage } from "./pages/HeaderPages/BlogPage";
 import { ContactPage } from "./pages/HeaderPages/ContactPage";
 import { NoFoundPage } from "./pages/HeaderPages/NoFoundPage";
-import { Layout } from "./components/Layout";
+import { Layout } from "./components/Layout/Layout";
+import { AccountPage } from "./pages/FooterPages/AccountPage";
+import { SupportPage } from "./pages/FooterPages/SupportPage";
+import { ReturnsPage } from "./pages/FooterPages/ReturnsPage";
+import { TrackingPage } from "./pages/FooterPages/TrackingPage";
+import { LocationPage } from "./pages/FooterPages/LocationPage";
+import { NewsPage } from "./pages/FooterPages/NewsPage";
+import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
 
 const App = () => {
   return (
-      <div className="Board">
+      <div className={classes.Board}>
           <Routes>
-              <Route path="/" element={<Layout/>}>
+            <Route path="/" element={<Layout/>}>
               <Route index element={<HomePage/>}/>
               <Route path="/consoles" element={<ConsolesPage/>}/>
               <Route path="/accessories" element={<AccessoriesPage/>}/>
@@ -22,7 +29,15 @@ const App = () => {
               <Route path="/blog" element={<BlogPage/>}/>
               <Route path="/contact" element={<ContactPage/>}/>
               <Route path="*" element={<NoFoundPage/>}/>
-          </Route>
+
+              <Route path="/account" element={<AccountPage/>}/>
+              <Route path="/support" element={<SupportPage/>}/>
+              <Route path="/returns" element={<ReturnsPage/>}/>
+              <Route path="/tracking" element={<TrackingPage/>}/>
+              <Route path="/location" element={<LocationPage/>}/>
+              <Route path="/news" element={<NewsPage/>}/>
+              <Route path="/xboxsupport" element={<xboxSupportPage/>}/>
+            </Route>
           </Routes>
       </div>
   );

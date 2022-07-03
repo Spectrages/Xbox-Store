@@ -1,0 +1,38 @@
+.content {
+  min-height: 100%;
+  height: auto !important;
+}
+.content p {
+  margin: 0;
+}
+.content .container {
+  margin-top: 100px;
+  min-height: 100%;
+}
+.content .xbox_1 {
+  position: absolute;
+  left: 46.09%;
+  right: 46.09%;
+  top: 30%;
+  bottom: 30%;
+}
+.content .linksText {
+  width: auto;
+  height: 20px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  text-decoration: none;
+}
+.content .linksText:hover {
+  text-decoration: green underline;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+/*# sourceMappingURL=Layout.module.css.map */

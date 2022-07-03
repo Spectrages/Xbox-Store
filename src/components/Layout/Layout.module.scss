@@ -1,0 +1,71 @@
+.content{
+  min-height: 100%;
+  height: auto !important;
+
+  p {
+    margin:0;
+  }
+  .container{
+    margin-top: 100px;
+    min-height:100%;
+  }
+
+  .xbox_1{
+    position: absolute;
+    left: 46.09%;
+    right: 46.09%;
+    top: 30%;
+    bottom: 30%;
+  }
+
+  .linksText{
+    width: auto;
+    height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: green underline;
+      font-weight: bold;
+      color: darkgreen;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

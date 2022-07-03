@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 1920px;
+  height: 100px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #FFFFFF;
+  z-index: 1000;
+}
+.header .searchBlock {
+  width: 103px;
+  height: 40px;
+  position: absolute;
+  left: 14.58%;
+  right: 80.05%;
+  top: 25%;
+  bottom: 30%;
+}
+.header .searchBlock .search_svg {
+  box-sizing: border-box;
+  position: absolute;
+  right: 83%;
+  top: 38%;
+  bottom: 30%;
+}
+.header .searchBlock .searchText {
+  width: auto;
+  height: 20px;
+  position: absolute;
+  left: 17.19%;
+  right: 80.05%;
+  top: 40%;
+  bottom: 40%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+}
+.header .searchBlock .searchText:hover {
+  text-decoration: green underline;
+  font-weight: bold;
+}
+.header .text_1 {
+  display: flex;
+  justify-content: inherit;
+  position: absolute;
+  left: 28.8%;
+  right: 56.51%;
+  top: 40%;
+  bottom: 36%;
+}
+.header .text_2 {
+  display: flex;
+  justify-content: inherit;
+  position: absolute;
+  left: 56.46%;
+  right: 32.08%;
+  top: 40%;
+  bottom: 40%;
+}
+.header .cartBlock {
+  position: absolute;
+  left: 79.84%;
+  right: 14.53%;
+  top: 28%;
+  bottom: 28%;
+}
+.header .cartBlock .cart {
+  position: absolute;
+  left: 24.33%;
+  right: 24.33%;
+  top: 17.58%;
+  bottom: 17.58%;
+}
+.header .cartBlock .cartsCounter {
+  position: initial;
+  left: 82.45%;
+  right: 14.53%;
+  top: 28%;
+  bottom: 52%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  margin-right: -50px;
+}
+
+/*# sourceMappingURL=header.module.css.map */
