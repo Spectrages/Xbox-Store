@@ -12,7 +12,6 @@ const Header = () => {
     const [cost, setCost] = useState(0)
 
     return (
-        <div>
         <header className={classes_header.header}>
 
             <div className={classes_header.searchBlock}>
@@ -42,7 +41,6 @@ const Header = () => {
                 </div>
             </div>
         </header>
-        </div>
     );
 };
 

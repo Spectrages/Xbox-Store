@@ -2,16 +2,21 @@ import React from 'react';
 import classes from './HomePage.module.scss'
 
 import titleXbox from './img/titleXbox.png'
+
 import monoBlockXbox_first from './img/xboxBlack.png'
-import black_xbox from './img/imageBlack.png'
-import blue_xbox from './img/imageBlue.png'
-import yellow_xbox from './img/imageYellow.png'
-import green_xbox from './img/imageGreen.png'
+
+import xbox_1 from './img/imageBlack.png'
+import xbox_2 from './img/imageBlue.png'
+import xbox_3 from './img/imageYellow.png'
+import xbox_4 from './img/imageGreen.png'
+
 import headset_1 from './img/headset_1.png'
 import headset_2 from './img/headset_2.png'
 import headset_3 from './img/headset_3.png'
 import headset_4 from './img/headset_4.png'
+
 import monoBlockXbox_second from './img/xbox_second.png'
+
 import game_1 from './img/game-1.png'
 import game_2 from './img/game-2.png'
 import game_3 from './img/game-3.png'
@@ -27,6 +32,34 @@ import last_img from './img/image 38.png'
 
 
 export const HomePage = () => {
+
+    const sales_game_pictures = [
+        {name: game_1, alt: "Game 1"},
+        {name: game_2, alt: "Game 2"},
+        {name: game_3, alt: "Game 3"},
+        {name: game_4, alt: "Game 4"}
+    ]
+
+    const popular_game_pictures = [
+        {name: pop_game_1, alt: "Game 1", description: "Mortal Kombat 11"},
+        {name: pop_game_2, alt: "Game 2", description: "Minecraft"},
+        {name: pop_game_3, alt: "Game 3", description: "Red Dead Redemption 2"},
+        {name: pop_game_4, alt: "Game 4", description: "Elden Ring"}
+    ]
+
+    const quad_block_one = [
+        {name: xbox_1, alt: "Xbox 1", description: "Xbox Elite Series 2 Wireless Controller", price: "$50", color: 1},
+        {name: xbox_2, alt: "Xbox 2", description: "Aqua Shift Special Edition Xbox Wireless Controller", price: "$69.99", color: 0},
+        {name: xbox_3, alt: "Xbox 3", description: "Xbox Elite Series 2 Wireless Controller", price: "$199.99", color: 1},
+        {name: xbox_4, alt: "Xbox 4", description: "Forza Horizon 5 Limited Edition Xbox Wireless Controller", price: "$74.99", color: 0},
+    ]
+    const quad_block_two = [
+        {name: headset_1, alt: "Xbox Wireless Headset", description: "Xbox Elite Series 2 Wireless Controller", price: "$99.99"},
+        {name: headset_2, alt: "Blue Xbox", description: "Bang & Olufsen Beoplay Portal", price: "$499.99"},
+        {name: headset_3, alt: "Black Xbox", description: "Xbox Stereo Headset - 20th Anniversary Special Edition", price: "$69.99"},
+        {name: headset_4, alt: "Blue Xbox", description: "Xbox Stereo Headset", price: "$159.99"},
+    ]
+
     return (
         <div className={classes.mainContainer}>
             <div className={classes.mainContainer_first}>
@@ -54,55 +87,26 @@ export const HomePage = () => {
                 </div>
 
                 <div className={classes.first_quads_block}>
-                    <div className={classes.first_quad_block}>
-                        <img src = {black_xbox} alt='Black Xbox'/>
-                        <p className={classes.text_white}> Xbox Elite Series 2 Wireless Controller</p><br/>
-                        <p className={classes.text_price_white}> $50 </p>
-                    </div>
+                    {quad_block_one.map((element) => {
+                        return(
+                            <div>
+                                <img src = {element.name} alt={element.alt}/>
+                                <p className={classes.text_white}>{element.description}</p><br/>
+                                <p className={classes.text_price_white}>{element.price}</p>
 
-                    <div className={classes.second_quad_block}>
-                        <img src = {blue_xbox} alt='Blue Xbox'/>
-                        <p className={classes.text_black}> Xbox Elite Series 2 Wireless Controller</p><br/>
-                        <p className={classes.text_price_black}> $69.99 </p>
-                    </div>
-
-                    <div className={classes.third_quad_block}>
-                        <img src = {green_xbox} alt='Blue Xbox'/>
-                        <p className={classes.text_white}> Xbox Elite Series 2 Wireless Controller</p><br/>
-                        <p className={classes.text_price_white}> $199.99 </p>
-                    </div>
-
-                    <div className={classes.fourth_quad_block}>
-                        <img src = {yellow_xbox} alt='Yellow Xbox'/>
-                        <p className={classes.text_black}> Xbox Elite Series 2 Wireless Controller</p><br/>
-                        <p className={classes.text_price_black}> $74.99 </p>
-                    </div>
+                            </div>
+                        )})}
                 </div>
 
                 <div className={classes.second_quads_block}>
-                    <div className={classes.first_quad_block}>
-                        <img src = {headset_1} alt='headset'/>
-                        <p className={classes.text_white}> Xbox Wireless Headset</p><br/>
-                        <p className={classes.text_price_white}> $99.99 </p>
-                    </div>
-
-                    <div className={classes.second_quad_block}>
-                        <img src = {headset_3} alt='headset'/>
-                        <p className={classes.text_black}> Bang & Olufsen Beoplay Portal</p><br/>
-                        <p className={classes.text_price_black}> $499.99 </p>
-                    </div>
-
-                    <div className={classes.third_quad_block}>
-                        <img src = {headset_4} alt='headset'/>
-                        <p className={classes.text_white}> Xbox Stereo Headset - 20th Anniversary Special Edition</p><br/>
-                        <p className={classes.text_price_white}> $69.99 </p>
-                    </div>
-
-                    <div className={classes.fourth_quad_block}>
-                        <img src = {headset_2} alt='headset'/>
-                        <p className={classes.text_black}> Xbox Stereo Headset</p><br/>
-                        <p className={classes.text_price_black}> $159.99 </p>
-                    </div>
+                    {quad_block_two.map((element) => {
+                        return(
+                            <div>
+                                <img src = {element.name} alt={element.alt}/>
+                                <p className={classes.text_white}>{element.description}</p><br/>
+                                <p className={classes.text_price_white}>{element.price}</p>
+                            </div>
+                        )})}
                 </div>
 
                 <div className={classes.second_monoBlock}>
@@ -133,35 +137,25 @@ export const HomePage = () => {
                     </div>
 
                     <div className={classes.right_block}>
-                        <img src={game_1} alt="game_1" />
-                        <img src={game_2} alt="game_2" />
-                        <img src={game_3} alt="game_3" />
-                        <img src={game_4} alt="game_4" />
+                        {sales_game_pictures.map((element) => {
+                            return(
+                                <img src={element.name} alt={element.alt} />
+                            )
+                        })}
                     </div>
                 </div>
 
                 <div className={classes.popular_games}>
                     <p className={classes.popular_text}>Popular games</p>
                     <div className={classes.images}>
-                        <figure>
-                            <img className={classes.img} src={pop_game_1} alt="pop_game_1" />
-                            <figcaption>Mortal Kombat 11</figcaption>
-                        </figure>
-
-                        <figure>
-                            <img className={classes.img} src={pop_game_2} alt="pop_game_2" />
-                            <figcaption>Minecraft</figcaption>
-                        </figure>
-
-                        <figure>
-                            <img className={classes.img} src={pop_game_3} alt="pop_game_3" />
-                            <figcaption>Red Dead Redemption 2</figcaption>
-                        </figure>
-
-                        <figure>
-                            <img className={classes.img} src={pop_game_4} alt="pop_game_4" />
-                            <figcaption>Elden Ring</figcaption>
-                        </figure>
+                        {popular_game_pictures.map((element) => {
+                            return(
+                                <figure>
+                                    <img className={classes.img} src={element.name} alt={element.alt} />
+                                    <figcaption>{element.description}</figcaption>
+                                </figure>
+                            )
+                        })}
                     </div>
                 </div>
 

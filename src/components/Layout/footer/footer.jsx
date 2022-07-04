@@ -6,10 +6,9 @@ import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div>
-            <footer className={classes_footer.footer}>
+            <div className={classes_footer.footer}>
                 <div className={classes_footer.leftTitle}>
-                    <img className={classes.xbox_1} src={logoSvg} alt = "This is Xbox logo"/>
+                    <img className={classes.xbox_2} src={logoSvg} alt = "This is Xbox logo"/>
                     <p className={classes_footer.date}>© 2022 XBOX</p>
                 </div>
                 <div className={classes_footer.rightTitle}>
@@ -39,8 +38,7 @@ const Footer = () => {
                         <Link className={classes.linksText} to="/accessories">Xbox accessories</Link>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
     );
 };
 
