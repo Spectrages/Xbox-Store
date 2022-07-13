@@ -48,16 +48,16 @@ export const HomePage = () => {
     ]
 
     const quad_block_one = [
-        {name: card_1, alt: "Card 1"},
-        {name: card_2, alt: "Card 2"},
-        {name: card_3, alt: "Card 3"},
-        {name: card_4, alt: "Card 4"},
+        {name: card_1, alt: "Card 1", description: "Xbox Elite Series 2 Wireless Controller", price: "$50"},
+        {name: card_2, alt: "Card 2", description: "Aqua Shift Special Edition Xbox Wireless Controller", price: "$69.99"},
+        {name: card_3, alt: "Card 3", description: "Forza Horizon 5 Limited Edition Xbox Wireless Controller", price: "$74.99"},
+        {name: card_4, alt: "Card 4", description: "Xbox Elite Series 2 Wireless Controller", price: "$199.99"},
     ]
     const quad_block_two = [
-        {name: card_5, alt: "Card 5"},
-        {name: card_6, alt: "Card 6"},
-        {name: card_7, alt: "Card 7"},
-        {name: card_8, alt: "Card 8"},
+        {name: card_5, alt: "Card 5", description: "Xbox Wireless Headset", price: "$99.99"},
+        {name: card_6, alt: "Card 6", description: "Bang & Olufsen Beoplay Portal", price: "$499.99"},
+        {name: card_7, alt: "Card 7", description: "Xbox Stereo Headset - 20th Anniversary Special Edition", price: "$69.99"},
+        {name: card_8, alt: "Card 8", description: "Xbox Stereo Headset", price: "$159.99"},
     ]
 
     return (
@@ -86,14 +86,20 @@ export const HomePage = () => {
                 <div className={classes.first_quads_block}>
                     {quad_block_one.map((element) => {
                         return(
-                            <img className={classes.card} src={element.name} alt={element.alt}/>
+                            <div className={classes.full_card}>
+                                <img src={element.name} alt={element.alt}/>
+                                <span className={classes.description_text}>{element.description}<br/>{element.price}</span>
+                            </div>
                         )})}
                 </div>
 
                 <div className={classes.second_quads_block}>
                     {quad_block_two.map((element) => {
                         return(
-                            <img className={classes.card} src={element.name} alt={element.alt}/>
+                            <div className={classes.full_card}>
+                                <img src={element.name} alt={element.alt}/>
+                                <span className={classes.description_text}>{element.description}<br/>{element.price}</span>
+                            </div>
                         )})}
                 </div>
 

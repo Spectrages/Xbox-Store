@@ -92,27 +92,27 @@
   position: absolute;
   width: 690px;
   height: 500px;
-  top: 700px;
+  top: 720px;
   left: 690px;
-  flex-flow: column wrap;
   display: flex;
+  flex-flow: wrap;
 }
 
 .second_quads_block {
   position: absolute;
   width: 690px;
   height: 500px;
-  top: 1200px;
+  top: 1220px;
   margin: 0;
-  flex-flow: column wrap;
   display: flex;
+  flex-flow: wrap;
 }
 
 .first_monoBlock {
   position: absolute;
   width: 690px;
   height: 500px;
-  top: 700px;
+  top: 720px;
   background: #EDEDED;
 }
 
@@ -121,7 +121,7 @@
   width: 690px;
   height: 500px;
   left: 690px;
-  top: 1200px;
+  top: 1220px;
   background: #EDEDED;
 }
 
@@ -142,9 +142,47 @@
   left: 36.3%;
 }
 
-.card:hover {
-  outline: 2px solid grey;
+.description_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  display: flex;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.full_card {
+  display: inline-block;
+  justify-content: center;
+  width: 335px;
+  height: 250px;
+  font-size: 17px;
+  background-blend-mode: multiply;
+}
+.full_card:hover {
+  outline: 2px solid green;
   outline-offset: -2px;
+}
+
+.full_card:nth-child(1) {
+  color: white;
+  background: black;
+}
+
+.full_card:nth-child(2) {
+  color: black;
+  background: white;
+}
+
+.full_card:nth-child(3) {
+  color: black;
+  background: white;
+}
+
+.full_card:nth-child(4) {
+  color: white;
+  background: black;
 }
 
 .title_text_3 {
@@ -394,7 +432,7 @@ figcaption {
   position: absolute;
   width: 555px;
   height: 55px;
-  left: 749px;
+  left: 812px;
   top: 48px;
   font-size: 42px;
 }
@@ -414,8 +452,8 @@ figcaption {
   display: flex;
   position: absolute;
   width: 210px;
-  top: 220px;
-  left: 765px;
+  top: 188px;
+  left: 829px;
 }
 .fifth_more_button:hover {
   background: #11BC15;

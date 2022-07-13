@@ -6,7 +6,7 @@ import { ConsolesPage } from "./pages/HeaderPages/ConsolesPage";
 import { AccessoriesPage }from "./pages/HeaderPages/AccessoriesPage";
 import { GamesPage } from "./pages/HeaderPages/GamesPage";
 import { BlogPage } from "./pages/HeaderPages/BlogPage";
-import { ContactPage } from "./pages/HeaderPages/ContactPage";
+import { ContactPage } from "./pages/HeaderPages/ContactPage/ContactPage";
 import { NoFoundPage } from "./pages/HeaderPages/NoFoundPage";
 import { Layout } from "./components/Layout/Layout";
 import { AccountPage } from "./pages/FooterPages/AccountPage";
