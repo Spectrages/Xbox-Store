@@ -1,0 +1,65 @@
+@mixin main_text_styles{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.mapImage{
+  position: absolute;
+  width: 785px;
+  height: 600px;
+  left: 855px;
+  top: 100px;
+}
+
+.logo{
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  left: 1325px;
+  top: 371px;
+}
+.text_1{
+  position: absolute;
+  width: 555px;
+  height: 143px;
+  left: 280px;
+  top: 150px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.contacts_1{
+  @include main_text_styles;
+  font-size: 42px;
+  font-weight: bold;
+  width: 555px;
+}
+.description_1{
+  @include main_text_styles;
+  font-size: 20px;
+}
+.contacts_2{
+  position: absolute;
+  width: 477.58px;
+  height: 195px;
+  left: 280px;
+  top: 323px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  @include main_text_styles;
+  font-size: 17px;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.description_2{
+  @include main_text_styles;
+  display: flex;
+  color: #0F7C10;
+  font-size: 20px;
+  margin-top: 3px;
+}
