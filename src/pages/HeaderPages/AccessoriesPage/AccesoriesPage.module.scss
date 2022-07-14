@@ -1,0 +1,122 @@
+.main_content{
+  position: relative;
+  width: 1920px;
+  height: 2447px;
+  top:100px;
+}
+@mixin main_text_styles{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@mixin buttons_styles{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 50px;
+  border: #0F7C10 2px solid;
+  color: #0F7C10;
+  &:hover {
+    background: #0F7C10;
+    color: white;
+    fill: white;
+  }
+}
+
+.text_controllers{
+  @include main_text_styles;
+  font-weight: bold;
+  font-size: 42px;
+  width: 325px;
+  height: 55px;
+}
+.controllers_block{
+  position: absolute;
+  width: 325px;
+  height: 117px;
+  left: 280px;
+  top: 50px;
+  text-align: left;
+}
+.button_1{
+  @include buttons_styles;
+  @include main_text_styles;
+  font-size: 17px;
+  width: 205px;
+  height: 42px;
+  white-space: nowrap;
+  gap: calc(5% + 5px);
+}
+.pictures_1{
+  position: absolute;
+  width: 1015px;
+  height: 325px;
+  left: 625px;
+  top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.pic{
+  width: 325px;
+  height: 325px;
+  margin-right: 20px;
+  transition: 0.5s;
+
+  &:hover{
+    transform: scale(1.06);
+  }
+}
+
+.design_lab{
+  position: absolute;
+  width: 1920px;
+  height: 450px;
+  left: 0;
+  top: 475px;
+}
+
+.design_block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
+
+  position: absolute;
+  width: 553px;
+  height: 55px;
+  left: 280px;
+  top: 50px;
+}
+
+.text_design{
+  @include main_text_styles;
+  font-weight: bold;
+  font-size: 42px;
+  text-align: left;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
+.pictures_2{
+  position: absolute;
+  width: 1015px;
+  height: 325px;
+  display: flex;
+  flex-direction: row;
+  left: 14.58%;
+  right: 14.58%;
+  top: 27.78%;
+  bottom: 0%;
+}
+
+.headsets{
+
+}
+
+.stands{
+
+}

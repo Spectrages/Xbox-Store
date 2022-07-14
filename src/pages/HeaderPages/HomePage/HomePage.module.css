@@ -36,6 +36,7 @@
   height: 42px;
   position: absolute;
   color: white;
+  cursor: pointer;
   top: 380px;
 }
 .first_more_button:hover {
@@ -266,6 +267,7 @@
   height: 42px;
   position: absolute;
   color: white;
+  cursor: pointer;
   bottom: 30%;
   right: 30%;
 }
@@ -289,6 +291,7 @@
   height: 42px;
   position: absolute;
   color: white;
+  cursor: pointer;
   bottom: 30%;
   margin-left: 20px;
 }
@@ -345,6 +348,7 @@
   height: 42px;
   position: absolute;
   color: white;
+  cursor: pointer;
   width: 186px;
   top: 229px;
 }
@@ -449,6 +453,7 @@ figcaption {
   height: 42px;
   position: absolute;
   color: white;
+  cursor: pointer;
   display: flex;
   position: absolute;
   width: 210px;

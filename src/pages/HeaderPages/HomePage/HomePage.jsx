@@ -126,8 +126,7 @@ export const HomePage = () => {
                         {sales_game_pictures.map((element) => {
                             return(
                                 <img src={element.name} alt={element.alt} />
-                            )
-                        })}
+                            )})}
                     </div>
                 </div>
 

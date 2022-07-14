@@ -1,13 +1,7 @@
-.content {
-  min-height: 100%;
-  height: auto !important;
-  display: flex;
-}
-
 .container {
-  min-height: 100%;
-  flex: 1 0 auto;
-  flex-direction: column;
+  min-height: calc(100vh - 247px);
+  position: relative;
+  padding-bottom: 500px;
 }
 
 .xbox_1 {

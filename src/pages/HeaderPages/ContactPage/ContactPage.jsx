@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ContactPage.module.scss'
-import map from './assets/map.png'
-import xbox_logo from './assets/Box xbox.svg'
+import map from './img/map.png'
+import xbox_logo from './img/Box xbox.svg'
 
 export const ContactPage = () => {
 
