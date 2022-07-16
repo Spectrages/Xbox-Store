@@ -27,9 +27,7 @@ import pop_game_1 from './img/pop_game_1.png'
 import pop_game_2 from './img/pop_game_2.png'
 import pop_game_3 from './img/pop_game_3.png'
 import pop_game_4 from './img/pop_game_4.png'
-
-import last_img from './img/image 38.png'
-
+import LastBlock from "../../PagesComponents/LastBlock";
 
 
 export const HomePage = () => {
@@ -63,25 +61,36 @@ export const HomePage = () => {
 
     return (
         <div className={classes.mainContainer}>
-
             <div className={classes.mainContainer_first}>
                 <img className={classes.title_image} src={titleXbox} alt='Title Xbox'/>
-                <div className={classes.left_block_title}>
-                    <p className={classes.title_text_1}>XBOX SERIES S</p>
-                    <p className={classes.title_text_2}>Next-gen performance in the smallest Xbox ever</p>
-                    <DefaultButton>
-                            More
-                    </DefaultButton>
+                <div className={classes.title_left_block}>
+                    <span className={classes.title_text_1}>XBOX SERIES S</span>
+                    <span className={classes.title_text_2}>Next-gen performance in the smallest Xbox ever</span>
+                    <DefaultButton>More</DefaultButton>
                 </div>
             </div>
 
             <div className={classes.mainContainer_second}>
                 <div className={classes.first_monoBlock}>
                     <img className={classes.first_monoBlock_image} src={monoBlockXbox_first} alt='Title Xbox'/>
-                    <p className={classes.title_text_3}>Halo infinite LIMITED EDITION XBOX SERIES X package</p>
-                    <DefaultButton>
-                            More
-                    </DefaultButton>
+                    <div className={classes.monoblock_text_1}>
+                        <span className={classes.title_text_3}>Halo infinite</span>
+                        <span className={classes.title_text_3}
+                            style={{fontWeight: 'bold'}}
+                        >
+                            LIMITED EDITION
+                        </span>
+                        <span className={classes.title_text_3}
+                            style={{color: '#0F7C10', fontWeight: 'bold'}}
+                        >
+                            XBOX SERIES X
+                        </span>
+                        <span className={classes.title_text_3}
+                              style={{paddingBottom: '40px'}}
+                        >
+                            package</span>
+                        <DefaultButton>More</DefaultButton>
+                    </div>
                 </div>
 
                 <div className={classes.first_quads_block}>
@@ -89,7 +98,8 @@ export const HomePage = () => {
                         return(
                             <div className={classes.full_card}>
                                 <img src={element.name} alt={element.alt}/>
-                                <span className={classes.description_text}>{element.description}<br/>{element.price}</span>
+                                <span className={classes.description_text}>{element.description}</span>
+                                <span className={classes.price_text}>{element.price}</span>
                             </div>
                         )})}
                 </div>
@@ -99,30 +109,29 @@ export const HomePage = () => {
                         return(
                             <div className={classes.full_card}>
                                 <img src={element.name} alt={element.alt}/>
-                                <span className={classes.description_text}>{element.description}<br/>{element.price}</span>
+                                <span className={classes.description_text}>{element.description}</span>
+                                <span className={classes.price_text}>{element.price}</span>
                             </div>
                         )})}
                 </div>
 
                 <div className={classes.second_monoBlock}>
                     <img className={classes.second_monoBlock_image} src={monoBlockXbox_second} alt='Title Xbox'/>
-                    <div>
-                        <p className={classes.title_text_5}>XBOX SERIES X</p>
-                        <p className={classes.title_text_6}>“This is a huge leap forward”</p>
-                        <p className={classes.title_text_7}>– Shazoo (RU)</p>
+                    <div className={classes.monoblock_text_2}>
+                        <span className={classes.title_text_5}>XBOX SERIES X</span>
+                        <span className={classes.title_text_6}>“This is a huge leap forward”</span>
+                        <span className={classes.title_text_7}>– Shazoo (RU)</span>
+                        <DefaultButton>More</DefaultButton>
                     </div>
-                    <DefaultButton>
-                        More
-                    </DefaultButton>
                 </div>
             </div>
 
             <div className={classes.sales_block}>
-                        <p className={classes.text_sales_1}>Save up to 70%.</p>
-                        <p className={classes.text_sales_2}>Collaboration Sale</p>
-                        <DefaultButton>
-                            View offers
-                        </DefaultButton>
+                <div className={classes.sales_text_block}>
+                    <span className={classes.text_sales_1}>Save up to 70%.</span>
+                    <span className={classes.text_sales_2}>Collaboration Sale</span>
+                    <DefaultButton style={{width: '186px'}}>View offers</DefaultButton>
+                </div>
                     <div className={classes.right_block}>
                         {sales_game_pictures.map((element) => {
                             return(
@@ -132,7 +141,7 @@ export const HomePage = () => {
                 </div>
 
             <div className={classes.popular_games}>
-                    <p className={classes.popular_text}>Popular games</p>
+                    <span className={classes.popular_text}>Popular games</span>
                     <div className={classes.images}>
                         {popular_game_pictures.map((element) => {
                             return(
@@ -144,15 +153,7 @@ export const HomePage = () => {
                         })}
                     </div>
                 </div>
-
-            <div className={classes.last_block}>
-                    <img className={classes.last_image} src={last_img} alt="last img"/>
-                    <p className={classes.last_text} >Save 10% on your next order</p>
-                    <DefaultButton>
-                        Get a discount
-                    </DefaultButton>
-                </div>
-
+            <LastBlock/>
         </div>
     );
 };

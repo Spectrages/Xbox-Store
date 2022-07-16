@@ -11,27 +11,27 @@
 
 .mainContainer_first {
   position: absolute;
-  width: 100%;
+  width: 1360px;
   height: 750px;
-  top: 100px;
-  background: #F9F9F9;
-}
-
-.left_block_title {
-  position: absolute;
-  width: 670px;
-  height: 221px;
-  left: 5.8%;
-}
-
-.first_more_button {
-  top: 618px;
 }
 
 .title_image {
-  text-align: right;
   position: absolute;
-  margin-bottom: 114px;
+  width: 555px;
+  height: 555px;
+  left: 805px;
+  top: 81px;
+}
+
+.title_left_block {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  width: 670px;
+  height: 237px;
+  left: 115px;
+  top: 215px;
 }
 
 .title_text_1 {
@@ -39,13 +39,14 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  top: 50px;
+  position: relative;
+  font-weight: bold;
   width: 670px;
   height: 117px;
   font-size: 90px;
-  text-align: left;
+  line-height: 130%;
   color: #0F7C10;
+  position: relative;
 }
 
 .title_text_2 {
@@ -53,13 +54,13 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  top: 235px;
+  position: relative;
   width: 670px;
   height: 84px;
   font-size: 32px;
-  text-align: left;
   color: #000000;
+  position: relative;
+  padding-bottom: 60px;
 }
 
 .mainContainer_second {
@@ -98,6 +99,39 @@
   background: #EDEDED;
 }
 
+.monoblock_text_1 {
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: relative;
+  top: 102px;
+}
+
+.title_text_3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  position: relative;
+  width: 298px;
+  font-size: 32px;
+  color: #000000;
+  display: flex;
+  text-align: left;
+}
+
+.monoblock_text_2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  width: 230px;
+  height: 225px;
+  top: 135px;
+  left: 115px;
+}
+
 .second_monoBlock {
   position: absolute;
   width: 690px;
@@ -118,10 +152,6 @@
 .second_monoBlock_image {
   top: 100px;
   position: absolute;
-  width: 320px;
-  height: 300px;
-  right: 50%;
-  left: 36.3%;
 }
 
 .description_text {
@@ -129,9 +159,25 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
+  position: relative;
   display: flex;
   text-align: left;
   margin-left: 20px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.price_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  display: flex;
+  text-align: left;
+  margin-left: 20px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .full_card {
@@ -167,30 +213,10 @@
   background: black;
 }
 
-.title_text_3 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-  position: absolute;
-  width: 298px;
-  font-size: 32px;
-  color: #000000;
-  height: 168px;
-  left: 50%;
-  top: 102px;
-  display: flex;
-  text-align: left;
-}
-
 .title_text_4 {
   width: 298px;
-  font-family: "Roboto", sans-serif;
   color: #0F7C10;
-  font-style: normal;
-  font-weight: 400;
   font-size: 32px;
-  line-height: 130%;
   left: 50%;
 }
 
@@ -199,13 +225,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  text-align: left;
-  margin-left: 20px;
-  color: #000000;
-  width: 230px;
+  position: relative;
   font-size: 32px;
-  top: 135px;
+  color: #0F7C10;
+  font-weight: bold;
 }
 
 .title_text_6 {
@@ -213,13 +236,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  text-align: left;
-  margin-left: 20px;
+  position: relative;
   color: #000000;
-  width: 230px;
   font-size: 20px;
-  top: 197px;
+  font-weight: bold;
 }
 
 .title_text_7 {
@@ -227,23 +247,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  text-align: left;
-  margin-left: 20px;
-  width: 230px;
+  position: relative;
   font-size: 15px;
   color: #000000;
-  top: 259px;
-}
-
-.second_more_button {
-  bottom: 30%;
-  right: 30%;
-}
-
-.third_more_button {
-  bottom: 30%;
-  margin-left: 20px;
+  padding-bottom: 40px;
 }
 
 .sales_block {
@@ -258,12 +265,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  width: 555px;
-  height: 55px;
+  position: relative;
   font-size: 42px;
-  top: 75px;
   text-align: left;
+  font-weight: bold;
 }
 
 .text_sales_2 {
@@ -271,17 +276,18 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
-  width: 555px;
-  height: 42px;
+  position: relative;
   font-size: 32px;
-  top: 140px;
   text-align: left;
+  padding-bottom: 47px;
 }
 
-.fourth_more_button {
-  width: 186px;
-  top: 229px;
+.sales_text_block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  top: 75px;
+  left: 115px;
 }
 
 .right_block {
@@ -291,10 +297,11 @@
 }
 
 .popular_games {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 611px;
   top: 2015px;
+  display: flex;
 }
 
 .popular_text {
@@ -302,11 +309,12 @@
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
+  position: relative;
   width: 555px;
   height: 55px;
   font-size: 42px;
   margin-top: 25px;
+  font-weight: bold;
 }
 
 .images {
@@ -335,42 +343,11 @@ figcaption {
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  position: absolute;
+  position: relative;
   padding: 8px 6px 7px 6px;
   font-weight: bold;
-}
-
-.last_block {
-  position: absolute;
-  width: 1920px;
-  height: 450px;
-  top: 2700px;
-}
-
-.last_image {
-  position: absolute;
-  left: 24px;
-}
-
-.last_text {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-  position: absolute;
-  width: 555px;
-  height: 55px;
-  left: 812px;
-  top: 48px;
-  font-size: 42px;
-}
-
-.fifth_more_button {
-  display: flex;
-  position: absolute;
-  width: 210px;
-  top: 188px;
-  left: 829px;
+  text-align: left;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=HomePage.module.css.map */
