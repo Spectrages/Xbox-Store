@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './HomePage.module.scss'
+import DefaultButton from '../../../components/buttons/Default_button/Default_button'
 
 import titleXbox from './img/titleXbox.png'
 
@@ -68,9 +69,9 @@ export const HomePage = () => {
                 <div className={classes.left_block_title}>
                     <p className={classes.title_text_1}>XBOX SERIES S</p>
                     <p className={classes.title_text_2}>Next-gen performance in the smallest Xbox ever</p>
-                    <button className={classes.first_more_button}>
+                    <DefaultButton>
                             More
-                    </button>
+                    </DefaultButton>
                 </div>
             </div>
 
@@ -78,9 +79,9 @@ export const HomePage = () => {
                 <div className={classes.first_monoBlock}>
                     <img className={classes.first_monoBlock_image} src={monoBlockXbox_first} alt='Title Xbox'/>
                     <p className={classes.title_text_3}>Halo infinite LIMITED EDITION XBOX SERIES X package</p>
-                    <button className={classes.second_more_button}>
+                    <DefaultButton>
                             More
-                    </button>
+                    </DefaultButton>
                 </div>
 
                 <div className={classes.first_quads_block}>
@@ -110,18 +111,18 @@ export const HomePage = () => {
                         <p className={classes.title_text_6}>“This is a huge leap forward”</p>
                         <p className={classes.title_text_7}>– Shazoo (RU)</p>
                     </div>
-                    <button className={classes.third_more_button}>
+                    <DefaultButton>
                         More
-                    </button>
+                    </DefaultButton>
                 </div>
             </div>
 
             <div className={classes.sales_block}>
                         <p className={classes.text_sales_1}>Save up to 70%.</p>
                         <p className={classes.text_sales_2}>Collaboration Sale</p>
-                        <button className={classes.fourth_more_button}>
+                        <DefaultButton>
                             View offers
-                        </button>
+                        </DefaultButton>
                     <div className={classes.right_block}>
                         {sales_game_pictures.map((element) => {
                             return(
@@ -147,9 +148,9 @@ export const HomePage = () => {
             <div className={classes.last_block}>
                     <img className={classes.last_image} src={last_img} alt="last img"/>
                     <p className={classes.last_text} >Save 10% on your next order</p>
-                    <button className={classes.fifth_more_button}>
+                    <DefaultButton>
                         Get a discount
-                    </button>
+                    </DefaultButton>
                 </div>
 
         </div>

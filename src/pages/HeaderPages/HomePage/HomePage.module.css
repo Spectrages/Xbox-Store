@@ -25,26 +25,7 @@
 }
 
 .first_more_button {
-  background: #0F7C10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  gap: 10px;
-  width: 140px;
-  height: 42px;
-  position: absolute;
-  color: white;
-  cursor: pointer;
-  top: 380px;
-}
-.first_more_button:hover {
-  background: #11BC15;
-}
-.first_more_button:active {
-  background: white;
-  border-bottom: 2px solid #11BC15;
+  top: 618px;
 }
 
 .title_image {
@@ -256,51 +237,13 @@
 }
 
 .second_more_button {
-  background: #0F7C10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  gap: 10px;
-  width: 140px;
-  height: 42px;
-  position: absolute;
-  color: white;
-  cursor: pointer;
   bottom: 30%;
   right: 30%;
 }
-.second_more_button:hover {
-  background: #11BC15;
-}
-.second_more_button:active {
-  background: white;
-  border-bottom: 2px solid #11BC15;
-}
 
 .third_more_button {
-  background: #0F7C10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  gap: 10px;
-  width: 140px;
-  height: 42px;
-  position: absolute;
-  color: white;
-  cursor: pointer;
   bottom: 30%;
   margin-left: 20px;
-}
-.third_more_button:hover {
-  background: #11BC15;
-}
-.third_more_button:active {
-  background: white;
-  border-bottom: 2px solid #11BC15;
 }
 
 .sales_block {
@@ -337,27 +280,8 @@
 }
 
 .fourth_more_button {
-  background: #0F7C10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  gap: 10px;
-  width: 140px;
-  height: 42px;
-  position: absolute;
-  color: white;
-  cursor: pointer;
   width: 186px;
   top: 229px;
-}
-.fourth_more_button:hover {
-  background: #11BC15;
-}
-.fourth_more_button:active {
-  background: white;
-  border-bottom: 2px solid #11BC15;
 }
 
 .right_block {
@@ -442,30 +366,11 @@ figcaption {
 }
 
 .fifth_more_button {
-  background: #0F7C10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  gap: 10px;
-  width: 140px;
-  height: 42px;
-  position: absolute;
-  color: white;
-  cursor: pointer;
   display: flex;
   position: absolute;
   width: 210px;
   top: 188px;
   left: 829px;
-}
-.fifth_more_button:hover {
-  background: #11BC15;
-}
-.fifth_more_button:active {
-  background: white;
-  border-bottom: 2px solid #11BC15;
 }
 
 /*# sourceMappingURL=HomePage.module.css.map */

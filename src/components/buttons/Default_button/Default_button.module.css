@@ -1,0 +1,23 @@
+.myButton {
+  background: #0F7C10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 50px;
+  gap: 10px;
+  width: 140px;
+  height: 42px;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+}
+.myButton:hover {
+  background: #11BC15;
+}
+.myButton:active {
+  background: white;
+  border-bottom: 2px solid #11BC15;
+}
+
+/*# sourceMappingURL=Default_button.module.css.map */
