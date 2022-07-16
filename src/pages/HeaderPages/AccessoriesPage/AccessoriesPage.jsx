@@ -10,6 +10,17 @@ import pic_5 from './img/image5.png'
 import pic_6 from './img/image6.png'
 import pic_7 from './img/image7.png'
 
+import pic_8 from './img/image8.png'
+import pic_9 from './img/image9.png'
+import pic_10 from './img/image10.png'
+
+import pic_11 from './img/image11.png'
+import pic_12 from './img/image12.png'
+import pic_13 from './img/image13.png'
+import pic_14 from './img/image14.png'
+
+
+
 export const AccessoriesPage = () => {
 
     const first_pictures = [
@@ -25,12 +36,25 @@ export const AccessoriesPage = () => {
         {name: pic_7}
     ]
 
+    const third_pictures = [
+        {name: pic_8},
+        {name: pic_9},
+        {name: pic_10},
+    ]
+
+    const fourth_pictures = [
+        {name: pic_11},
+        {name: pic_12},
+        {name: pic_13},
+        {name: pic_14},
+    ]
+
     return (
         <div className={classes.main_content}>
-            <div>
+            <div className={classes.controllers}>
                 <div className={classes.controllers_block}>
-                    <span className={classes.text_controllers}>Controllers</span>
-                    <button className={classes.button_1}>
+                    <span className={classes.title_text}>Controllers</span>
+                    <button className={classes.button}>
                         Learn more
                         <img src={arrow} alt='arrow'/>
                     </button>
@@ -45,21 +69,37 @@ export const AccessoriesPage = () => {
                         )})}
                 </div>
             </div>
-
 {/*//////////////////////////////////////////////////////////////////////*/}
             <div className={classes.design_lab}>
-                <div>
-                    <div className={classes.design_block}>
-                        <span className={classes.text_design}>XBOX Design Lab </span>
-                        <button className={classes.button_1}>
-                            Learn more
-                            <img src={arrow} alt='arrow'/>
-                        </button>
-                    </div>
+                <div className={classes.design_block}>
+                    <span className={classes.title_text}>XBOX Design Lab </span>
+                    <button className={classes.button}>
+                        Learn more
+                        <img src={arrow} alt='arrow'/>
+                    </button>
+                </div>
+            </div>
+            <div className={classes.pictures_2}>
+                {seconds_pictures.map((element) => {
+                    return (
+                        <div className={classes.pic}>
+                            <img src={element.name} alt='picture'/>
+                        </div>
+                    )})}
+            </div>
+
+{/*//////////////////////////////////////////////////////////////////////*/}
+            <div className={classes.headsets}>
+                <div className={classes.headset_block}>
+                    <span className={classes.title_text}>Headsets</span>
+                    <button className={classes.button}>
+                        Learn more
+                        <img src={arrow} alt='arrow'/>
+                    </button>
                 </div>
 
-                <div className={classes.pictures_2}>
-                    {seconds_pictures.map((element) => {
+                <div className={classes.pictures_1}>
+                    {third_pictures.map((element) => {
                         return (
                             <div className={classes.pic}>
                                 <img src={element.name} alt='picture'/>
@@ -67,17 +107,24 @@ export const AccessoriesPage = () => {
                         )})}
                 </div>
             </div>
-
-{/*//////////////////////////////////////////////////////////////////////*/}
-            <div className={classes.headsets}>
-
-
-            </div>
 {/*//////////////////////////////////////////////////////////////////////*/}
             <div className={classes.stands}>
-
-            </div>
-
+                    <div className={classes.stands_block}>
+                        <span className={classes.title_text}>Stands and Charging Solutions </span>
+                        <button className={classes.button}>
+                            Learn more
+                            <img src={arrow} alt='arrow'/>
+                        </button>
+                    </div>
+                </div>
+                <div className={classes.pictures_3}>
+                    {fourth_pictures.map((element) => {
+                        return (
+                            <div className={classes.pic}>
+                                <img src={element.name} alt='picture'/>
+                            </div>
+                        )})}
+                </div>
         </div>
     );
 };

@@ -1,9 +1,12 @@
-.main_content{
-  position: relative;
+
+@mixin content_style{
+  position: absolute;
   width: 1920px;
-  height: 2447px;
-  top:100px;
+  height: 375px;
+  left: 0;
+  top: 100px;
 }
+
 @mixin main_text_styles{
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -25,12 +28,35 @@
   }
 }
 
-.text_controllers{
+@mixin pictures{
+  position: absolute;
+  width: 1015px;
+  height: 325px;
+  left: 14.58%;
+  right: 14.58%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.main_content{
+  position: relative;
+  width: 1920px;
+  height: 2447px;
+  top:100px;
+}
+
+.controllers{
+  @include content_style;
+}
+
+.title_text{
   @include main_text_styles;
   font-weight: bold;
   font-size: 42px;
-  width: 325px;
+  width: 585px;
   height: 55px;
+  letter-spacing: -1px;
 }
 .controllers_block{
   position: absolute;
@@ -40,7 +66,7 @@
   top: 50px;
   text-align: left;
 }
-.button_1{
+.button{
   @include buttons_styles;
   @include main_text_styles;
   font-size: 17px;
@@ -59,6 +85,15 @@
   flex-direction: row;
 }
 
+.pictures_2{
+  @include pictures;
+  top: 24.2%;
+}
+.pictures_3{
+  @include pictures;
+  top: 57.8%;
+}
+
 .pic{
   width: 325px;
   height: 325px;
@@ -71,20 +106,13 @@
 }
 
 .design_lab{
-  position: absolute;
-  width: 1920px;
-  height: 450px;
-  left: 0;
+  @include content_style;
   top: 475px;
 }
 
 .design_block{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0;
   gap: 20px;
-
   position: absolute;
   width: 553px;
   height: 55px;
@@ -92,31 +120,34 @@
   top: 50px;
 }
 
-.text_design{
-  @include main_text_styles;
-  font-weight: bold;
-  font-size: 42px;
-  text-align: left;
-  text-transform: capitalize;
-  letter-spacing: -1px;
-}
-
-.pictures_2{
-  position: absolute;
-  width: 1015px;
-  height: 325px;
-  display: flex;
-  flex-direction: row;
-  left: 14.58%;
-  right: 14.58%;
-  top: 27.78%;
-  bottom: 0%;
-}
-
 .headsets{
+  @include content_style;
+  top: 925px;
+}
 
+.headset_block{
+  position: absolute;
+  width: 325px;
+  height: 117px;
+  left: 280px;
+  top: 50px;
+  text-align: left;
 }
 
 .stands{
+  @include content_style;
+  top: 1300px;
+}
 
+.stands_block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
+  position: absolute;
+  width: 803px;
+  height: 55px;
+  left: 280px;
+  top: 50px;
 }
