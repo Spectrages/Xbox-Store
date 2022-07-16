@@ -18,6 +18,7 @@ import pic_11 from './img/image11.png'
 import pic_12 from './img/image12.png'
 import pic_13 from './img/image13.png'
 import pic_14 from './img/image14.png'
+import last_img from "../HomePage/img/image 38.png";
 
 
 
@@ -51,80 +52,89 @@ export const AccessoriesPage = () => {
 
     return (
         <div className={classes.main_content}>
-            <div className={classes.controllers}>
-                <div className={classes.controllers_block}>
-                    <span className={classes.title_text}>Controllers</span>
-                    <button className={classes.button}>
-                        Learn more
-                        <img src={arrow} alt='arrow'/>
-                    </button>
-                </div>
 
-                <div className={classes.pictures_1}>
+            <div className={classes.first_block}>
+            <div className={classes.text_button_block_first}>
+                <span className={classes.title_text}>Controllers</span>
+                <button className={classes.button}>
+                    Learn more
+                    <img src={arrow} alt='arrow'/>
+                </button>
+            </div>
+                <div className={classes.pictures_first}>
                     {first_pictures.map((element) => {
-                        return (
-                            <div className={classes.pic}>
+                        return(
+                            <div className={classes.picture_style}>
                                 <img src={element.name} alt='picture'/>
                             </div>
                         )})}
                 </div>
             </div>
-{/*//////////////////////////////////////////////////////////////////////*/}
-            <div className={classes.design_lab}>
-                <div className={classes.design_block}>
-                    <span className={classes.title_text}>XBOX Design Lab </span>
+
+            <div className={classes.second_block}>
+                <div className={classes.text_button_block_second}>
+                    <span className={classes.title_text}>XBOX Design Lab</span>
                     <button className={classes.button}>
                         Learn more
                         <img src={arrow} alt='arrow'/>
                     </button>
                 </div>
-            </div>
-            <div className={classes.pictures_2}>
-                {seconds_pictures.map((element) => {
-                    return (
-                        <div className={classes.pic}>
-                            <img src={element.name} alt='picture'/>
-                        </div>
-                    )})}
+                <div className={classes.pictures_second}>
+                    {seconds_pictures.map((element) =>{
+                        return(
+                            <div className={classes.picture_style}>
+                                <img src={element.name} alt='picture'/>
+                            </div>
+                        )})}
+                </div>
             </div>
 
-{/*//////////////////////////////////////////////////////////////////////*/}
-            <div className={classes.headsets}>
-                <div className={classes.headset_block}>
+            <div className={classes.third_block}>
+                <div className={classes.text_button_block_first}>
                     <span className={classes.title_text}>Headsets</span>
                     <button className={classes.button}>
                         Learn more
                         <img src={arrow} alt='arrow'/>
                     </button>
                 </div>
-
-                <div className={classes.pictures_1}>
+                <div className={classes.pictures_first}>
                     {third_pictures.map((element) => {
-                        return (
-                            <div className={classes.pic}>
+                        return(
+                            <div className={classes.picture_style}>
                                 <img src={element.name} alt='picture'/>
                             </div>
                         )})}
                 </div>
             </div>
-{/*//////////////////////////////////////////////////////////////////////*/}
-            <div className={classes.stands}>
-                    <div className={classes.stands_block}>
-                        <span className={classes.title_text}>Stands and Charging Solutions </span>
-                        <button className={classes.button}>
-                            Learn more
-                            <img src={arrow} alt='arrow'/>
-                        </button>
-                    </div>
+
+            <div className={classes.fourth_block}>
+                <div className={classes.text_button_block_fourth}>
+                    <span className={classes.title_text}>Stands and Charging Solutions</span>
+                    <button className={classes.button}>
+                        Learn more
+                        <img src={arrow} alt='arrow'/>
+                    </button>
                 </div>
-                <div className={classes.pictures_3}>
-                    {fourth_pictures.map((element) => {
-                        return (
-                            <div className={classes.pic}>
+                <div className={classes.pictures_second}>
+                    {fourth_pictures.map((element) =>{
+                        return(
+                            <div className={classes.picture_style}>
                                 <img src={element.name} alt='picture'/>
                             </div>
                         )})}
                 </div>
+            </div>
+
+            <div className={classes.last_block}>
+                <div className={classes.text_button_block_last}>
+                    <span className={classes.title_text}>Save 10% on your next order</span>
+                    <button className={classes.button}>
+                        Get a discount
+                    </button>
+                </div>
+                <img className={classes.last_image} src={last_img} alt="last img"/>
+            </div>
+
         </div>
     );
 };

@@ -1,7 +1,7 @@
 
 @mixin content_style{
   position: absolute;
-  width: 1920px;
+  width: 100%;
   height: 375px;
   left: 0;
   top: 100px;
@@ -35,8 +35,24 @@
   left: 14.58%;
   right: 14.58%;
   bottom: 0;
+}
+
+@mixin text_button{
+  position: absolute;
+  width: 325px;
+  height: 117px;
+  left: 280px;
+  top: 50px;
+  text-align: left;
+}
+
+@mixin text_button_block{
+  @include text_button;
+  top: 0;
+  gap: 20px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .main_content{
@@ -45,9 +61,13 @@
   height: 2447px;
   top:100px;
 }
-
-.controllers{
+///////////////////////////////////////////////////////////////////////////////////
+.first_block{
   @include content_style;
+}
+
+.text_button_block_first{
+  @include text_button;
 }
 
 .title_text{
@@ -58,14 +78,7 @@
   height: 55px;
   letter-spacing: -1px;
 }
-.controllers_block{
-  position: absolute;
-  width: 325px;
-  height: 117px;
-  left: 280px;
-  top: 50px;
-  text-align: left;
-}
+
 .button{
   @include buttons_styles;
   @include main_text_styles;
@@ -75,26 +88,16 @@
   white-space: nowrap;
   gap: calc(5% + 5px);
 }
-.pictures_1{
-  position: absolute;
-  width: 1015px;
-  height: 325px;
-  left: 625px;
-  top: 50px;
+
+.pictures_first{
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
+  position: relative;
+  top: 50px;
+  left: 625px;
 }
 
-.pictures_2{
-  @include pictures;
-  top: 24.2%;
-}
-.pictures_3{
-  @include pictures;
-  top: 57.8%;
-}
-
-.pic{
+.picture_style{
   width: 325px;
   height: 325px;
   margin-right: 20px;
@@ -102,52 +105,57 @@
 
   &:hover{
     transform: scale(1.06);
-  }
-}
+}}
 
-.design_lab{
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.second_block{
   @include content_style;
+  height: 450px;
   top: 475px;
 }
-
-.design_block{
-  display: flex;
-  gap: 20px;
-  position: absolute;
+.text_button_block_second{
+  @include text_button_block;
   width: 553px;
-  height: 55px;
-  left: 280px;
-  top: 50px;
 }
-
-.headsets{
+.pictures_second{
+  display: flex;
+  left: 14.58%;
+  position: relative;
+  top: 27.78%;
+}
+//////////////////////////////////////////////////////////////
+.third_block{
   @include content_style;
   top: 925px;
 }
-
-.headset_block{
-  position: absolute;
-  width: 325px;
-  height: 117px;
-  left: 280px;
-  top: 50px;
-  text-align: left;
-}
-
-.stands{
+/////////////////////////////////////////////////////////////
+.fourth_block{
   @include content_style;
+  height: 450px;
   top: 1300px;
 }
-
-.stands_block{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0;
-  gap: 20px;
+.text_button_block_fourth{
+  @include text_button_block;
+  width: 809px;
+}
+///////////////////////////////////////////////////////////////
+.last_block{
+  @include content_style;
+  height: 450px;
+  top: 1750px;
+}
+.last_image{
   position: absolute;
-  width: 803px;
-  height: 55px;
   left: 280px;
-  top: 50px;
+  top:50px;
+}
+.text_button_block_last{
+  @include text_button;
+  width: 555px;
+  position: absolute;
+  left: 56.51%;
+  right: 14.58%;
+  top: 33.11%;
+  bottom: 34.22%;
 }
