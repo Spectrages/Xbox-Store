@@ -42,7 +42,6 @@
 }
 .links_text:hover {
   text-decoration: green underline;
-  font-weight: bold;
   color: darkgreen;
 }
 

@@ -16,7 +16,7 @@ const Header = () => {
 
             <div className={classes_header.searchBlock}>
                 <img className={classes_header.search_svg} src={searchSvg} alt = "This is Search icon"/>
-                <p className={classes_header.searchText}>Search</p>
+                <span className={classes_header.searchText}>Search</span>
             </div>
 
             <div className={classes_header.text_1}>
@@ -36,8 +36,8 @@ const Header = () => {
             <div className={classes_header.cartBlock}>
                 <img className={classes_header.cart} src = {cartSvg} alt = 'This is cart-logo'/>
                 <div className={classes_header.cartsCounter}>
-                    <p>Cart ({count})</p>
-                    <p>${cost}</p>
+                    <span>Cart ({count})</span> <br/>
+                    <span>${cost}</span>
                 </div>
             </div>
         </header>

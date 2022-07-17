@@ -69,30 +69,19 @@
 .cartBlock {
   position: absolute;
   left: 79.84%;
-  right: 14.53%;
-  top: 28%;
-  bottom: 28%;
+  top: 28px;
+  width: 108px;
+  height: 44px;
+  display: flex;
 }
-.cartBlock .cart {
-  position: absolute;
-  left: 24.33%;
-  right: 24.33%;
-  top: 17.58%;
-  bottom: 17.58%;
-}
-.cartBlock .cartsCounter {
-  position: initial;
-  left: 82.45%;
-  right: 14.53%;
-  top: 28%;
-  bottom: 52%;
+
+.cartsCounter {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
   color: #000000;
-  margin-right: -50px;
 }
 
 /*# sourceMappingURL=header.module.css.map */
