@@ -29,6 +29,8 @@ import pop_game_3 from './img/pop_game_3.png'
 import pop_game_4 from './img/pop_game_4.png'
 import LastBlock from "../../PagesComponents/LastBlock/LastBlock";
 import ModalWindow from "../../PagesComponents/ModalWindow/ModalWindow";
+import ButtonWithArray from "../../../components/buttons/Button_with_array/Button_with_array";
+import {Link} from "react-router-dom";
 
 
 export const HomePage = () => {
@@ -89,7 +91,7 @@ export const HomePage = () => {
                               style={{paddingBottom: '40px'}}
                         >
                             package</span>
-                        <DefaultButton>More</DefaultButton>
+                        <Link className={classes.link_text_style} to="/consoles"><DefaultButton>More</DefaultButton></Link>
                     </div>
                 </div>
 
@@ -121,7 +123,7 @@ export const HomePage = () => {
                         <span className={classes.title_text_5}>XBOX SERIES X</span>
                         <span className={classes.title_text_6}>“This is a huge leap forward”</span>
                         <span className={classes.title_text_7}>– Shazoo (RU)</span>
-                        <DefaultButton>More</DefaultButton>
+                        <Link className={classes.link_text_style} to="/consoles"><DefaultButton>More</DefaultButton></Link>
                     </div>
                 </div>
             </div>

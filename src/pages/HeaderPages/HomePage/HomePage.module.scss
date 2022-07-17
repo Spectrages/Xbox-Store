@@ -287,3 +287,20 @@ figcaption{
   font-size: 20px;
 }
 
+.link_text_style{
+  width: auto;
+  height: 20px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: green underline;
+    font-weight: bold;
+    color: darkgreen;
+  }
+}

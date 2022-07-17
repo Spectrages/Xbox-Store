@@ -20,6 +20,7 @@ import pic_14 from './img/image14.png'
 
 import LastBlock from "../../PagesComponents/LastBlock/LastBlock";
 import ButtonWithArray from "../../../components/buttons/Button_with_array/Button_with_array";
+import {Link} from "react-router-dom";
 
 
 
@@ -57,7 +58,7 @@ export const AccessoriesPage = () => {
             <div className={classes.first_block}>
             <div className={classes.text_button_block_first}>
                 <span className={classes.title_text}>Controllers</span>
-                <ButtonWithArray>Learn More</ButtonWithArray>
+                <Link className={classes.link_text_style} to="/consoles"><ButtonWithArray>Learn More</ButtonWithArray></Link>
             </div>
                 <div className={classes.pictures_first}>
                     {first_pictures.map((element) => {

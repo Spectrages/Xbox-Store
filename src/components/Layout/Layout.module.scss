@@ -1,18 +1,7 @@
 .content{
   //display: flex;
 }
-.container{
-  min-height: calc(100vh - 247px);
-  position: relative;
-}
-.xbox_1{
-  position: absolute;
-  left: 46.09%;
-  right: 46.09%;
-  top: 30%;
-  bottom: 30%;
-}
-.linksText{
+@mixin main_link_text_style{
   width: auto;
   height: 20px;
   font-family: 'Roboto', sans-serif;
@@ -30,6 +19,20 @@
     font-weight: bold;
     color: darkgreen;
   }
+}
+.container{
+  min-height: calc(100vh - 247px);
+  position: relative;
+}
+.xbox_1{
+  position: absolute;
+  left: 46.09%;
+  right: 46.09%;
+  top: 30%;
+  bottom: 30%;
+}
+.linksText{
+  @include main_link_text_style;
 }
 
 
