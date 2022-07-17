@@ -1,3 +1,21 @@
-
+.button_style {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 50px;
+  border: #0F7C10 2px solid;
+  color: #0F7C10;
+  font-size: 17px;
+  width: 205px;
+  height: 42px;
+  white-space: nowrap;
+  gap: calc(5% + 5px);
+}
+.button_style:hover {
+  background: #0F7C10;
+  color: white;
+  fill: white;
+}
 
 /*# sourceMappingURL=Button_with_array.module.css.map */

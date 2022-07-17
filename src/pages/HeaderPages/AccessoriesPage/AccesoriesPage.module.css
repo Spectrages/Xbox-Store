@@ -34,30 +34,6 @@
   letter-spacing: -1px;
 }
 
-.button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  border: #0F7C10 2px solid;
-  color: #0F7C10;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-  font-size: 17px;
-  width: 205px;
-  height: 42px;
-  white-space: nowrap;
-  gap: calc(5% + 5px);
-}
-.button:hover {
-  background: #0F7C10;
-  color: white;
-  fill: white;
-}
-
 .pictures_first {
   display: flex;
   flex-flow: row;

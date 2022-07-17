@@ -29,4 +29,27 @@
   left: 135px;
 }
 
+.myButton {
+  background: #0F7C10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 140px;
+  height: 42px;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  align-items: center;
+}
+.myButton:hover {
+  background: #11BC15;
+}
+.myButton:active {
+  background: white;
+  border-bottom: 2px solid #11BC15;
+  color: black;
+}
+
 /*# sourceMappingURL=LastBlock.module.css.map */

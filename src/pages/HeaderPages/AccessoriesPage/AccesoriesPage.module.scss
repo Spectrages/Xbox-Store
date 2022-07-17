@@ -13,20 +13,6 @@
   font-weight: 500;
   line-height: 130%;
 }
-@mixin buttons_styles{
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 50px;
-  border: #0F7C10 2px solid;
-  color: #0F7C10;
-  &:hover {
-    background: #0F7C10;
-    color: white;
-    fill: white;
-  }
-}
 
 @mixin pictures{
   position: absolute;
@@ -77,16 +63,6 @@
   width: 585px;
   height: 55px;
   letter-spacing: -1px;
-}
-
-.button{
-  @include buttons_styles;
-  @include main_text_styles;
-  font-size: 17px;
-  width: 205px;
-  height: 42px;
-  white-space: nowrap;
-  gap: calc(5% + 5px);
 }
 
 .pictures_first{

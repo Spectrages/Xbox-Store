@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './HomePage.module.scss'
 import DefaultButton from '../../../components/buttons/Default_button/Default_button'
 
@@ -28,6 +28,7 @@ import pop_game_2 from './img/pop_game_2.png'
 import pop_game_3 from './img/pop_game_3.png'
 import pop_game_4 from './img/pop_game_4.png'
 import LastBlock from "../../PagesComponents/LastBlock";
+import ModalWindow from "./ModalWindow/ModalWindow";
 
 
 export const HomePage = () => {
@@ -58,7 +59,6 @@ export const HomePage = () => {
         {name: card_7, alt: "Card 7", description: "Xbox Stereo Headset - 20th Anniversary Special Edition", price: "$69.99"},
         {name: card_8, alt: "Card 8", description: "Xbox Stereo Headset", price: "$159.99"},
     ]
-
     return (
         <div className={classes.mainContainer}>
             <div className={classes.mainContainer_first}>
@@ -149,8 +149,7 @@ export const HomePage = () => {
                                     <img className={classes.img} src={element.name} alt={element.alt} />
                                     <figcaption>{element.description}</figcaption>
                                 </figure>
-                            )
-                        })}
+                            )})}
                     </div>
                 </div>
             <LastBlock/>
