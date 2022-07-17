@@ -1,10 +1,10 @@
-.modal {
+.modal_disable {
   position: fixed;
   display: flex;
   height: 100vh;
   width: 100vw;
-  top: 0;
   left: 0;
+  top: 0;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.4);
@@ -13,12 +13,25 @@
   transition: 0.3s;
 }
 
-.modal.active {
+.modal_enable {
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 200;
   opacity: 1;
   pointer-events: all;
 }
 
-.content {
+.content_enable {
   background: #F9F9F9;
   width: 869px;
   height: 500px;
@@ -26,8 +39,23 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 54px;
+  top: 0;
   border-radius: 8px;
+  transform: scale(1);
+}
+
+.content_disable {
+  background: #F9F9F9;
+  width: 869px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 0;
+  border-radius: 8px;
+  transform: scale(0);
+  transition: 0.4s;
 }
 
 .text_1 {
@@ -63,6 +91,16 @@
   background-color: transparent;
   color: inherit;
   outline: none;
+}
+
+.close_icon {
+  position: relative;
+  left: 396px;
+  top: 30px;
+}
+
+.close_icon_active:hover {
+  stroke: black;
 }
 
 /*# sourceMappingURL=ModalWindow.module.css.map */

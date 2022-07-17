@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './AccesoriesPage.module.scss'
-import arrow from './img/arrow.svg'
 import pic_1 from './img/image1.png'
 import pic_2 from './img/image2.png'
 import pic_3 from './img/image3.png'
@@ -19,7 +18,7 @@ import pic_12 from './img/image12.png'
 import pic_13 from './img/image13.png'
 import pic_14 from './img/image14.png'
 
-import LastBlock from "../../PagesComponents/LastBlock";
+import LastBlock from "../../PagesComponents/LastBlock/LastBlock";
 import ButtonWithArray from "../../../components/buttons/Button_with_array/Button_with_array";
 
 
@@ -114,7 +113,7 @@ export const AccessoriesPage = () => {
                         )})}
                 </div>
             </div>
-            <LastBlock/>
+            <LastBlock style={{top: '1800px', left: '280px'}}/>
         </div>
     );
 };

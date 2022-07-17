@@ -7,13 +7,13 @@
   width: 417px;
 }
 
-.modal{
+@mixin modal{
   position: fixed;
   display: flex;
   height: 100vh;
   width: 100vw;
-  top:0;
   left: 0;
+  top: 0;
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.4);
@@ -22,12 +22,18 @@
   transition: 0.3s;
 }
 
-.modal.active{
-  opacity: 1;
+.modal_disable{
+  @include modal;
+}
+
+.modal_enable{
+  @include modal;
+  z-index: 200;
+  opacity:1;
   pointer-events: all;
 }
 
-.content{
+@mixin content{
   background: #F9F9F9;
   width: 869px;
   height: 500px;
@@ -35,8 +41,19 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 54px;
+  top: 0;
   border-radius: 8px;
+}
+
+.content_enable{
+  @include content;
+  transform: scale(1);
+}
+
+.content_disable{
+  @include content;
+  transform: scale(0);
+  transition: 0.4s;
 }
 
 .text_1{
@@ -61,4 +78,16 @@
   background-color: transparent;
   color: inherit;
   outline: none;
+}
+
+.close_icon{
+  position: relative;
+  left: 396px;
+  top: 30px;
+}
+
+.close_icon_active{
+  &:hover{
+    stroke: black;
+  }
 }

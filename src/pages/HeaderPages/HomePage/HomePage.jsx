@@ -27,8 +27,8 @@ import pop_game_1 from './img/pop_game_1.png'
 import pop_game_2 from './img/pop_game_2.png'
 import pop_game_3 from './img/pop_game_3.png'
 import pop_game_4 from './img/pop_game_4.png'
-import LastBlock from "../../PagesComponents/LastBlock";
-import ModalWindow from "./ModalWindow/ModalWindow";
+import LastBlock from "../../PagesComponents/LastBlock/LastBlock";
+import ModalWindow from "../../PagesComponents/ModalWindow/ModalWindow";
 
 
 export const HomePage = () => {
@@ -152,7 +152,7 @@ export const HomePage = () => {
                             )})}
                     </div>
                 </div>
-            <LastBlock/>
+            <LastBlock style={{top: '2700px'}}/>
         </div>
     );
 };
