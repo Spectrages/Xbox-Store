@@ -94,6 +94,34 @@
   background: #0F7C10;
 }
 
+.filter{
+  position: relative;
+  display: flex;
+  left: 1349px;
+  bottom: 23.4%;
+  align-items: center;
+}
+
+.sort_text{
+  @include main_text_styles;
+  margin-right: 8px;
+  color: #F9F9F9;
+  font-size: 15px;
+
+}
+
+.selector_text{
+  @include main_text_styles;
+  margin-right: 64px;
+  color: #F9F9F9;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.table_icon{
+  margin-right: 12px;
+}
+
 .price_range{
   @include main_text_styles;
   position: absolute;
@@ -142,5 +170,45 @@ input[type="range"]::-moz-range-track {
 }
 
 .cards_block{
+  position: relative;
+  width: 1360px;
+  height: 1850px;
+  left: 280px;
+  top: 299px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.card{
+  position: relative;
+  min-width: 453px;
+  height: 370px;
+  justify-content: center;
+  text-align: left;
+  top: 20px;
+  background: white;
+  transition: 0.8s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.card_description{
+  display: flex;
+  flex-direction: column;
+  width: 324px;
+  height: 44px;
+  margin-left: 38px;
+  top: 20px;
+}
+
+.card_name{
+  @include main_text_styles;
+  font-size: 17px;
+}
+
+.card_price{
+  @include main_text_styles;
+  font-size: 17px;
+  font-weight: bold;
 }

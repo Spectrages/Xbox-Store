@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './App.module.scss'
 import {Route, Routes} from "react-router-dom"
 import { HomePage } from "./pages/HeaderPages/HomePage/HomePage";
-import { ConsolesPage } from "./pages/HeaderPages/ConsolesPage/ConsolesPage";
+import { ConsolesPage } from "./pages/HeaderPages/ConsolesPage/ConsolesList/ConsolesPage";
 import { AccessoriesPage }from "./pages/HeaderPages/AccessoriesPage/AccessoriesPage";
 import { GamesPage } from "./pages/HeaderPages/GamesPage";
 import { BlogPage } from "./pages/HeaderPages/BlogPage";
