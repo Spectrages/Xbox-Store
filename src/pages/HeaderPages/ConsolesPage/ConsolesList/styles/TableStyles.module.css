@@ -1,0 +1,75 @@
+.cards_styles {
+  position: relative;
+  width: 1360px;
+  height: 1850px;
+  left: 280px;
+  top: 299px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  min-width: 453px;
+  height: 370px;
+  justify-content: center;
+  text-align: left;
+  top: 20px;
+  background: white;
+  transition: 0.8s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  width: 324px;
+  height: 44px;
+  margin-left: 38px;
+  top: 20px;
+}
+
+.card_name {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 17px;
+}
+
+.card_price {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card_name_big {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  position: relative;
+  font-size: 17px;
+  bottom: 70px;
+}
+
+.card_price_big {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  bottom: 70px;
+}
+
+/*# sourceMappingURL=TableStyles.module.css.map */

@@ -1,0 +1,63 @@
+.cards_styles {
+  position: relative;
+  width: 1360px;
+  height: 810px;
+  left: 280px;
+  top: 299px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  min-width: 453px;
+  justify-content: center;
+  text-align: left;
+  top: 20px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  margin: 0;
+}
+
+.card_name {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.card_description {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_price {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card_text {
+  padding-bottom: 4px;
+}
+
+/*# sourceMappingURL=row_style.module.css.map */

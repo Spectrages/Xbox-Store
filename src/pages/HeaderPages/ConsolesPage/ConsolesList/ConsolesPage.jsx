@@ -1,42 +1,19 @@
 import React, {useState} from 'react';
 import classes from './ConsolesPage.module.scss'
 import {Link} from "react-router-dom";
-import card_1 from './assets/image 1.png'
-import card_2 from './assets/image 2.png'
-import card_3 from './assets/image 3.png'
-import card_4 from './assets/image 4.png'
-import card_5 from './assets/image 5.png'
-import card_6 from './assets/image 6.png'
-import card_7 from './assets/image 7.png'
-import card_8 from './assets/image 8.png'
-import card_9 from './assets/image 9.png'
-import card_10 from './assets/image 10.png'
-import card_11 from './assets/image 11.png'
-import card_12 from './assets/image 12.png'
-import card_13 from './assets/image 13.png'
 
-import tableSvg from './assets/app-menu_1.svg'
-import rowSvg from './assets/app-menu_2.svg'
+import TableConsoles from "./styles/Table_consoles";
+import RowConsoles from "./styles/Row_consoles";
+
+import {ReactComponent as Icon_1} from './assets/app-menu_1.svg'
+import {ReactComponent as Icon_2} from './assets/app-menu_2.svg';
+import {ReactComponent as Icon_array} from './assets/array.svg';
 
 
 export const ConsolesPage = () => {
-    const [number, setNumber] = useState(250)
-
-    const cards = [
-        {id: 1, name: card_1, description: 'Xbox Wireless Controller - Deep Pink', price: 64.99},
-        {id: 2, name: card_2, description: 'Xbox Wireless Controller – 20th Anniversary Special Edition', price: 79.99},
-        {id: 3, name: card_3, description: 'Xbox Wireless Controller – Phantom Magenta Special Edition', price: 69.99},
-        {id: 4, name: card_4, description: 'PowerA Enhanced Wired Controller for Xbox Series X|S - Purple Camo', price: 37.99},
-        {id: 5, name: card_5, price: 84.99},
-        {id: 6, name: card_6, description: 'Xbox Wireless Controller – Forza Horizon 5 Limited Edition', price: 84.99},
-        {id: 7, name: card_7, description: 'SCUF Instinct', price: 199.99},
-        {id: 8, name: card_8, description: 'Xbox Wireless Controller – Grey/Blue', price: 64.99},
-        {id: 9, name: card_9, price: 59.99},
-        {id: 10, name: card_10, description: 'Xbox Wireless Controller + Wireless Adapter for Windows 10', price: 79.99},
-        {id: 11, name: card_11, description: 'Xbox Wireless Controller – Aqua Shift Special Edition', price: 69.99},
-        {id: 12, name: card_12, description: 'Thrustmaster ESWAP X Pro Controller', price: 159.99},
-        {id: 13, name: card_13, description: 'PowerA Enhanced Wired Controller for Xbox Series X|S - Pink Lemonade', price: 37.99},
-    ]
+    const [number, setNumber] = useState(25)
+    //if false == table; true == row
+    const [filter, setFilter] = useState(false)
     return (
         <div className={classes.main_content}>
 
@@ -72,27 +49,29 @@ export const ConsolesPage = () => {
                 <div className={classes.filter}>
                     <span className={classes.sort_text}>Sort result by:</span>
                     <span className={classes.selector_text}>Selector</span>
-                    <img className={classes.table_icon} src={tableSvg} alt="form"/>
-                    <img className={classes.row_icon} src={rowSvg} alt="form"/>
+                    <Icon_1
+                        className={filter ? classes.table_disable : classes.table_enable}
+                        onClick={() => setFilter(false)}
+                    />
+                    <Icon_2
+                        className={filter ? classes.row_enable : classes.row_disable}
+                        onClick={() => setFilter(true)}
+                    />
                 </div>
             </div>
+                {filter ? <RowConsoles price={number}/> : <TableConsoles price={number}/>}
 
-            <div className={classes.cards_block}>
-                {cards.map((element ) => {
-                    if(element.price <= number)
-                    return(
-                        <div className={classes.card}>
-                            <Link to='/home'>
-                            <img src={element.name} alt='card'/>
-                            </Link>
-                            <div className={classes.card_description}>
-                                <span className={classes.card_name}>{element.description}</span>
-                                <span className={classes.card_price}>${element.price}</span>
-                            </div>
-                        </div>
-                    )})}
+            <div className={classes.pages_block}>
+                <div className={classes.page}>
+                    <span className={classes.simple_elem}>1</span>
+                    <span className={classes.simple_elem}>2</span>
+                    <span className={classes.simple_elem}>3</span>
+                    <span className={classes.simple_elem}>4</span>
+                    <span className={classes.simple_elem}>...</span>
+                    <span className={classes.simple_elem}>12</span>
+                    <Icon_array className={classes.simple_elem}/>
+                </div>
             </div>
-
         </div>
 
     );

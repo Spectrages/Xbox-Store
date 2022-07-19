@@ -17,7 +17,7 @@
 .main_content{
   position: relative;
   width: 1920px;
-  height: 2442px;
+  height: 2246px;
 }
 .title{
   position: absolute;
@@ -117,9 +117,19 @@
   font-size: 17px;
   font-weight: bold;
 }
+.table_enable{
+  fill: white;
+}
 
-.table_icon{
-  margin-right: 12px;
+.table_disable{
+  fill: #0E5B0F;
+}
+
+.row_enable{
+  fill: white;
+}
+.row_disable{
+  fill: #0E5B0F;
 }
 
 .price_range{
@@ -169,46 +179,32 @@ input[type="range"]::-moz-range-track {
   background-color: #FFFFFF;
 }
 
-.cards_block{
-  position: relative;
-  width: 1360px;
-  height: 1850px;
-  left: 280px;
-  top: 299px;
+.pages_block{
+  position: absolute;
   display: flex;
-  flex-wrap: wrap;
-}
-
-.card{
-  position: relative;
-  min-width: 453px;
-  height: 370px;
+  width: 1920px;
+  height: 46px;
+  left: 0;
+  top: 2187px;
   justify-content: center;
-  text-align: left;
-  top: 20px;
-  background: white;
-  transition: 0.8s;
-  &:hover{
-    transform: scale(1.1);
-  }
+  align-items: center;
 }
 
-.card_description{
+.page{
+  gap: 20px;
+  width: 220px;
+  height: 26px;
+  @include main_text_styles;
+  font-weight: 400;
+  font-size: 15px;
+  justify-content: space-between;
   display: flex;
-  flex-direction: column;
-  width: 324px;
-  height: 44px;
-  margin-left: 38px;
-  top: 20px;
+  align-items: center;
 }
 
-.card_name{
-  @include main_text_styles;
-  font-size: 17px;
-}
-
-.card_price{
-  @include main_text_styles;
-  font-size: 17px;
-  font-weight: bold;
+.simple_elem{
+  &:hover{
+    color: #0F7C10;
+    text-decoration: underline;
+  }
 }

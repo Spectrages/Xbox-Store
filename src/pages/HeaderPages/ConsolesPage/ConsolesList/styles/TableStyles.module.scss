@@ -1,0 +1,63 @@
+@mixin main_text_styles{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+}
+.cards_styles{
+  position: relative;
+  width: 1360px;
+  height: 1850px;
+  left: 280px;
+  top: 299px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  position: relative;
+  min-width: 453px;
+  height: 370px;
+  justify-content: center;
+  text-align: left;
+  top: 20px;
+  background: white;
+  transition: 0.8s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.card_description{
+  display: flex;
+  flex-direction: column;
+  width: 324px;
+  height: 44px;
+  margin-left: 38px;
+  top: 20px;
+}
+
+.card_name{
+  @include main_text_styles;
+  font-size: 17px;
+}
+
+.card_price{
+  @include main_text_styles;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card_name_big {
+  @include main_text_styles;
+  position: relative;
+  font-size: 17px;
+  bottom: 70px;
+}
+.card_price_big {
+  @include main_text_styles;
+  font-size: 17px;
+  font-weight: bold;
+  bottom: 70px;
+}
