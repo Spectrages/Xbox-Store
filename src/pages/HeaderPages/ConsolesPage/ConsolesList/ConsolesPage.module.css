@@ -214,36 +214,4 @@ input[type=range]::-moz-range-track {
   background-color: #FFFFFF;
 }
 
-.pages_block {
-  position: absolute;
-  display: flex;
-  width: 1920px;
-  height: 46px;
-  left: 0;
-  top: 2187px;
-  justify-content: center;
-  align-items: center;
-}
-
-.page {
-  gap: 20px;
-  width: 220px;
-  height: 26px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-  position: relative;
-  font-weight: 400;
-  font-size: 15px;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-}
-
-.simple_elem:hover {
-  color: #0F7C10;
-  text-decoration: underline;
-}
-
 /*# sourceMappingURL=ConsolesPage.module.css.map */

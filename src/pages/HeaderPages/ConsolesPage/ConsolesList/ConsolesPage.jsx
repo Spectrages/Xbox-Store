@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import classes from './ConsolesPage.module.scss'
 import {Link} from "react-router-dom";
 
-import TableConsoles from "./styles/Table_consoles";
-import RowConsoles from "./styles/Row_consoles";
+import TableConsoles from "./Table/Table_consoles";
+import RowConsoles from "./Row/Row_consoles";
 
 import {ReactComponent as Icon_1} from './assets/app-menu_1.svg'
 import {ReactComponent as Icon_2} from './assets/app-menu_2.svg';
@@ -14,6 +14,7 @@ export const ConsolesPage = () => {
     const [number, setNumber] = useState(25)
     //if false == table; true == row
     const [filter, setFilter] = useState(false)
+
     return (
         <div className={classes.main_content}>
 
@@ -60,18 +61,6 @@ export const ConsolesPage = () => {
                 </div>
             </div>
                 {filter ? <RowConsoles price={number}/> : <TableConsoles price={number}/>}
-
-            <div className={classes.pages_block}>
-                <div className={classes.page}>
-                    <span className={classes.simple_elem}>1</span>
-                    <span className={classes.simple_elem}>2</span>
-                    <span className={classes.simple_elem}>3</span>
-                    <span className={classes.simple_elem}>4</span>
-                    <span className={classes.simple_elem}>...</span>
-                    <span className={classes.simple_elem}>12</span>
-                    <Icon_array className={classes.simple_elem}/>
-                </div>
-            </div>
         </div>
 
     );

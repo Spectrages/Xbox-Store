@@ -1,5 +1,5 @@
 import React from 'react';
-import {cards_row} from './Cards'
+import {cards_row} from '../Cards'
 import classes from './row_style.module.scss'
 import {Link} from "react-router-dom";
 
