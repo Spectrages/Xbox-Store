@@ -64,17 +64,17 @@ export const HomePage = () => {
     return (
         <div className={classes.mainContainer}>
             <div className={classes.mainContainer_first}>
-                <img className={classes.title_image} src={titleXbox} alt='Title Xbox'/>
                 <div className={classes.title_left_block}>
                     <span className={classes.title_text_1}>XBOX SERIES S</span>
                     <span className={classes.title_text_2}>Next-gen performance in the smallest Xbox ever</span>
                     <DefaultButton>More</DefaultButton>
                 </div>
+                <img className={classes.title_image} src={titleXbox} alt='Title Xbox'/>
             </div>
 
             <div className={classes.mainContainer_second}>
                 <div className={classes.first_monoBlock}>
-                    <img className={classes.first_monoBlock_image} src={monoBlockXbox_first} alt='Title Xbox'/>
+                    <img className={classes.monoBlock_image} src={monoBlockXbox_first} alt='Title Xbox'/>
                     <div className={classes.monoblock_text_1}>
                         <span className={classes.title_text_3}>Halo infinite</span>
                         <span className={classes.title_text_3}
@@ -118,7 +118,7 @@ export const HomePage = () => {
                 </div>
 
                 <div className={classes.second_monoBlock}>
-                    <img className={classes.second_monoBlock_image} src={monoBlockXbox_second} alt='Title Xbox'/>
+                    <img className={classes.monoBlock_image} src={monoBlockXbox_second} alt='Title Xbox'/>
                     <div className={classes.monoblock_text_2}>
                         <span className={classes.title_text_5}>XBOX SERIES X</span>
                         <span className={classes.title_text_6}>“This is a huge leap forward”</span>

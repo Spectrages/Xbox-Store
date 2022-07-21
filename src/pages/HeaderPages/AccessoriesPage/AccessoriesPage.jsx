@@ -55,12 +55,12 @@ export const AccessoriesPage = () => {
     return (
         <div className={classes.main_content}>
 
-            <div className={classes.first_block}>
-            <div className={classes.text_button_block_first}>
+            <div className={classes.line_first_block}>
+            <div className={classes.text_button_block_first_line}>
                 <span className={classes.title_text}>Controllers</span>
                 <Link className={classes.link_text_style} to="/consoles"><ButtonWithArray>Learn More</ButtonWithArray></Link>
             </div>
-                <div className={classes.pictures_first}>
+                <div className={classes.pictures_first_line}>
                     {first_pictures.map((element) => {
                         return(
                             <div className={classes.picture_style}>
@@ -70,12 +70,12 @@ export const AccessoriesPage = () => {
                 </div>
             </div>
 
-            <div className={classes.second_block}>
-                <div className={classes.text_button_block_second}>
+            <div className={classes.line_second_block}>
+                <div className={classes.text_button_block_second_line}>
                     <span className={classes.title_text}>XBOX Design Lab</span>
                     <ButtonWithArray>Learn More</ButtonWithArray>
                 </div>
-                <div className={classes.pictures_second}>
+                <div className={classes.pictures_second_line}>
                     {seconds_pictures.map((element) =>{
                         return(
                             <div className={classes.picture_style}>
@@ -85,12 +85,12 @@ export const AccessoriesPage = () => {
                 </div>
             </div>
 
-            <div className={classes.third_block}>
-                <div className={classes.text_button_block_first}>
+            <div className={classes.line_first_block}>
+                <div className={classes.text_button_block_first_line}>
                     <span className={classes.title_text}>Headsets</span>
                     <ButtonWithArray>Learn More</ButtonWithArray>
                 </div>
-                <div className={classes.pictures_first}>
+                <div className={classes.pictures_first_line}>
                     {third_pictures.map((element) => {
                         return(
                             <div className={classes.picture_style}>
@@ -100,12 +100,12 @@ export const AccessoriesPage = () => {
                 </div>
             </div>
 
-            <div className={classes.fourth_block}>
-                <div className={classes.text_button_block_fourth}>
+            <div className={classes.line_second_block}>
+                <div className={classes.text_button_block_second_line}>
                     <span className={classes.title_text}>Stands and Charging Solutions</span>
                     <ButtonWithArray>Learn More</ButtonWithArray>
                 </div>
-                <div className={classes.pictures_second}>
+                <div className={classes.pictures_second_line}>
                     {fourth_pictures.map((element) =>{
                         return(
                             <div className={classes.picture_style}>

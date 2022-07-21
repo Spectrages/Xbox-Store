@@ -1,10 +1,7 @@
 
 @mixin content_style{
-  position: absolute;
   width: 100%;
-  height: 375px;
-  left: 0;
-  top: 100px;
+  display: flex;
 }
 
 @mixin main_text_styles{
@@ -15,20 +12,12 @@
 }
 
 @mixin pictures{
-  position: absolute;
   width: 1015px;
-  height: 325px;
-  left: 14.58%;
-  right: 14.58%;
   bottom: 0;
 }
 
 @mixin text_button{
-  position: absolute;
   width: 325px;
-  height: 117px;
-  left: 280px;
-  top: 50px;
   text-align: left;
 }
 
@@ -44,32 +33,27 @@
 .main_content{
   position: relative;
   width: 1920px;
-  height: 2447px;
 }
 ///////////////////////////////////////////////////////////////////////////////////
-.first_block{
+.line_first_block{
   @include content_style;
 }
 
-.text_button_block_first{
+.text_button_block_first_line{
   @include text_button;
+  margin-top: 50px;
 }
 
 .title_text{
   @include main_text_styles;
-  font-weight: bold;
   font-size: 42px;
-  width: 585px;
-  height: 55px;
-  letter-spacing: -1px;
 }
 
-.pictures_first{
+.pictures_first_line{
   display: flex;
   flex-flow: row;
-  position: relative;
-  top: 50px;
-  left: 625px;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
 .picture_style{
@@ -77,78 +61,23 @@
   height: 325px;
   margin-right: 20px;
   transition: 0.5s;
-
   &:hover{
     transform: scale(1.06);
 }}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-.second_block{
+.line_second_block{
   @include content_style;
-  height: 450px;
-  top: 475px;
+  flex-flow: column;
 }
-.text_button_block_second{
+.text_button_block_second_line{
   @include text_button_block;
-  width: 553px;
+  width: auto;
+  margin-top: 50px;
 }
-.pictures_second{
+.pictures_second_line{
   display: flex;
-  left: 14.58%;
-  position: relative;
-  top: 27.78%;
+  margin-top: 20px;
 }
 //////////////////////////////////////////////////////////////
-.third_block{
-  @include content_style;
-  top: 925px;
-}
-/////////////////////////////////////////////////////////////
-.fourth_block{
-  @include content_style;
-  height: 450px;
-  top: 1300px;
-}
-.text_button_block_fourth{
-  @include text_button_block;
-  width: 809px;
-}
-///////////////////////////////////////////////////////////////
-.last_block{
-  @include content_style;
-  height: 450px;
-  top: 1750px;
-}
-.last_image{
-  position: absolute;
-  left: 280px;
-  top:50px;
-}
-.text_button_block_last{
-  @include text_button;
-  width: 555px;
-  position: absolute;
-  left: 56.51%;
-  right: 14.58%;
-  top: 33.11%;
-  bottom: 34.22%;
-}
-
-.link_text_style{
-  width: auto;
-  height: 20px;
-  font-size: 17px;
-  line-height: 20px;
-  color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  text-decoration: none;
-
-  &:hover{
-    text-decoration: green underline;
-    font-weight: bold;
-    color: darkgreen;
-  }
-}

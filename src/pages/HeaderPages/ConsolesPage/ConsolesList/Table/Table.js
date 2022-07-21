@@ -3,10 +3,10 @@ import classes from "./TableStyles.module.scss";
 import {Link} from "react-router-dom";
 
 const Table = ({price, consoles}) => {
+    const filteredConsoles = consoles.filter((item) => item.price >= price)
     return (
         <div className={classes.cards_styles}>
-            {consoles.map(item => {
-                if(price <= item.price){
+            {filteredConsoles.map(item=> {
                     return(
                         <div className={classes.card}>
                             <Link to='/home'>
@@ -17,7 +17,7 @@ const Table = ({price, consoles}) => {
                                 <span className={(item.id === 5 || item.id === 9) ?  classes.card_price_big : classes.card_price}>${item.price}</span>
                             </div>
                         </div>
-                    )}})}
+                    )})}
             </div>
     );
 };

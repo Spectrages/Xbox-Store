@@ -12,26 +12,30 @@ export const ContactPage = () => {
     ]
 
     return (
-        <div>
-            <img className={classes.mapImage} src={map} alt = 'map' />
-            <img className={classes.logo} src={xbox_logo} alt='logo'/>
-            <div className={classes.text_1}>
-                <span className={classes.contacts_1}>Contacts</span>
-                <span className={classes.description_1}>
-                    Gear up for action.
-                    Upgrade your controller to play like a pro, get a headset to play with friends,
-                    or expand your game storage.
-                </span>
+        <div className={classes.main_content}>
+            <div className={classes.map_images}>
+                <img className={classes.mapImage} src={map} alt = 'map'/>
+                <img className={classes.logo} src={xbox_logo} alt='logo'/>
             </div>
-            <div className={classes.contacts_2}>
-                {contacts.map((elements) => {
-                    return(
-                        <div>
-                            <p className={classes.name}>{elements.name}</p>
-                            <p className={classes.description_2}>{elements.description}</p>
-                        </div>
-                    )
-                })}
+
+            <div className={classes.main_text}>
+                <div className={classes.text_1}>
+                    <span className={classes.contacts_1}>Contacts</span>
+                    <span className={classes.description_1}>
+                        Gear up for action.
+                        Upgrade your controller to play like a pro, get a headset to play with friends,
+                        or expand your game storage.
+                    </span>
+                </div>
+                <div className={classes.contacts_2}>
+                    {contacts.map((elements) => {
+                        return(
+                            <div>
+                                <span className={classes.name}>{elements.name}</span>
+                                <span className={elements.name ==='Phone' ? classes.description_2_phone : classes.description_2}>{elements.description}</span>
+                            </div>
+                        )})}
+                </div>
             </div>
         </div>
     );

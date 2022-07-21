@@ -4,27 +4,39 @@
   font-weight: 500;
   line-height: 130%;
 }
+.main_content{
+  display: flex;
+  flex-flow: row-reverse;
+}
 .mapImage{
-  position: absolute;
   width: 785px;
   height: 600px;
-  left: 855px;
-  top: 100px;
+  display: block;
+  margin-top: 50px;
+  margin-left: 20px;
+
+}
+.map_images{
+  position:relative;
+  display:inline-block;
+}
+
+.main_text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .logo{
-  position: absolute;
   width: 74px;
   height: 74px;
-  left: 1325px;
-  top: 371px;
+  position: absolute;
+  left: 480px;
+  bottom: 278px;
 }
 .text_1{
-  position: absolute;
   width: 555px;
   height: 143px;
-  left: 280px;
-  top: 150px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -37,29 +49,39 @@
 }
 .description_1{
   @include main_text_styles;
+  margin-top: 10px;
+  font-weight: 400;
   font-size: 20px;
 }
 .contacts_2{
-  position: absolute;
   width: 477.58px;
   height: 195px;
-  left: 280px;
-  top: 323px;
   text-align: left;
   display: flex;
   flex-direction: column;
 }
 .name{
   @include main_text_styles;
-  font-size: 17px;
   display: flex;
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 17px;
 }
 .description_2{
   @include main_text_styles;
   display: flex;
   color: #0F7C10;
   font-size: 20px;
-  margin-top: 3px;
+  font-weight: 400;
+  margin-top: 5px;
 }
+
+.description_2_phone{
+  @include main_text_styles;
+  display: flex;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #0F7C10;
+  font-size: 17px;
+}
+
