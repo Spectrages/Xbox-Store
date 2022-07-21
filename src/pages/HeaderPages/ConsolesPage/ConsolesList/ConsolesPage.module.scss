@@ -10,27 +10,21 @@
   @include main_text_styles;
   font-size: 20px;
   color: #878787;
-  width: 225px;
   height: 23px;
 }
 
 .main_content{
-  position: relative;
-  width: 1920px;
-  height: 2246px;
+  display: flex;
+  flex-direction: column;
 }
 .title{
-  position: absolute;
-  width: 1920px;
-  height: 153px;
-  left: 1px;
-  top: 100px;
   display: flex;
+  flex-flow: column;
 }
 .title_block{
   @include gray_text_styles;
-  left: 280px;
-  top: 30px;
+  text-align: left;
+  margin-top: 30px;
 }
 .links_text{
   @include main_text_styles;
@@ -46,109 +40,89 @@
     color: darkgreen;
   }
 }
-
+//////////////////////////////////////////
 .header_controllers{
-  position: absolute;
   display: flex;
-  width: 1360px;
-  height: 60px;
-  left: 280px;
-  top: 63px;
+  margin-top: 13px;
 }
-
 .text_name{
   @include main_text_styles;
   font-size: 42px;
   height: 55px;
-  font-weight: bold;
-  margin-top:8px;
 }
-
 .result_text{
-  position: absolute;
+  display: flex;
   width: 325px;
   height: 60px;
-  left: 1135px;
-  text-align: right;
-  display: flex;
   flex-direction: column;
+  text-align: right;
+  margin-left: 710px;
 }
-
 .header_text_2{
   @include gray_text_styles;
-  padding-bottom: 8px;
 }
-
 .header_text_3{
   @include gray_text_styles;
   color: #000000;
-  font-weight: bold;
 }
+//////////////////////////////////////////
 
 .form_block{
-  position: absolute;
-  width: 1920px;
-  height: 46px;
-  left: 0;
-  top: 253px;
+  display: flex;
   background: #0F7C10;
+  height: 46px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .filter{
-  position: relative;
   display: flex;
-  left: 1349px;
-  bottom: 23.4%;
   align-items: center;
 }
 
 .sort_text{
   @include main_text_styles;
-  margin-right: 8px;
   color: #F9F9F9;
   font-size: 15px;
-
+  margin-left: 723px;
+  margin-right: 8px;
 }
 
 .selector_text{
   @include main_text_styles;
-  margin-right: 64px;
   color: #F9F9F9;
   font-size: 17px;
   font-weight: bold;
 }
 .table_enable{
   fill: white;
+  margin-left: 64px;
 }
 
 .table_disable{
   fill: #0E5B0F;
+  margin-left: 64px;
 }
 
 .row_enable{
   fill: white;
+  margin-left: 12px;
 }
 .row_disable{
   fill: #0E5B0F;
+  margin-left: 12px;
 }
 
 .price_range{
   @include main_text_styles;
-  position: absolute;
-  left: 14.58%;
-  right: 67.4%;
-  top: 21.74%;
-  bottom: 30.43%;
   display: flex;
-  margin-right: 5px;
   color: #F9F9F9;
   font-size: 17px;
+  width: 127px;
 }
 .input_style{
   position: relative;
-  display: flex;
-  left: 409px;
-  top: 10px;
+  display: inline-flex;
 }
 
 input[type='range'] {

@@ -4,10 +4,10 @@ import classes from './row_style.module.scss'
 import {Link} from "react-router-dom";
 
 const RowConsoles = ({price}) => {
+    const filteredConsoles = cards_row.filter((item) => item.price <= price)
     return (
         <div className={classes.cards_styles}>
-            {cards_row.map((element) => {
-                if(price <= element.price){
+            {filteredConsoles.map((element) => {
                 return (
                     <div className={classes.card}>
                         <Link to='/home'>
@@ -26,7 +26,7 @@ const RowConsoles = ({price}) => {
                         </form>
                         <span className={classes.card_price}>${element.price}</span>
                     </div>
-                )}})}
+                )})}
         </div>
     );
 };

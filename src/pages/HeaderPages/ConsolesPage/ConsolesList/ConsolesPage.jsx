@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import classes from './ConsolesPage.module.scss'
 import {Link} from "react-router-dom";
+import {cards_table, cards_row} from './Cards'
 
 import TableConsoles from "./Table/Table_consoles";
 import RowConsoles from "./Row/Row_consoles";
 
 import {ReactComponent as Icon_1} from './assets/app-menu_1.svg'
 import {ReactComponent as Icon_2} from './assets/app-menu_2.svg';
-import {ReactComponent as Icon_array} from './assets/array.svg';
 
 
 export const ConsolesPage = () => {
-    const [number, setNumber] = useState(25)
+    const [number, setNumber] = useState(250)
     //if false == table; true == row
     const [filter, setFilter] = useState(false)
 
@@ -27,7 +27,7 @@ export const ConsolesPage = () => {
                     <span className={classes.text_name}>Controllers</span>
                     <div className={classes.result_text}>
                         <span className={classes.header_text_2}>Controllers</span>
-                        <span className={classes.header_text_3}>– 169 results</span>
+                        <span className={classes.header_text_3}>– {filter ? cards_row.length : cards_table.length} results</span>
                     </div>
                 </div>
             </div>
@@ -37,17 +37,16 @@ export const ConsolesPage = () => {
                     <span style={{marginRight:'10px'}}>Under</span>
                     <span style={{marginRight:'10px'}}>${number}</span>
                 </div>
-                <input
-                    className={classes.input_style}
-                    step='0.01'
-                    min="0"
-                    max="500"
-                    type ="range"
-                    value = {number}
-                    onChange={event => setNumber(event.target.value)}
-                />
-
                 <div className={classes.filter}>
+                    <input
+                        className={classes.input_style}
+                        step='0.01'
+                        min="0"
+                        max="500"
+                        type ="range"
+                        value = {number}
+                        onChange={event => setNumber(event.target.value)}
+                    />
                     <span className={classes.sort_text}>Sort result by:</span>
                     <span className={classes.selector_text}>Selector</span>
                     <Icon_1

@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import classes from '../Table/TableStyles.module.scss'
+import classes from './Pagination.module.scss'
 
 const Pagination = ({ elemPerPage, totalConsoles, paginate }) => {
     const pageNumbers = []
@@ -10,13 +9,13 @@ const Pagination = ({ elemPerPage, totalConsoles, paginate }) => {
     }
     return (
         <div>
-            <ul className={classes.pagination}>
+            <div className={classes.pagination}>
                 {pageNumbers.map(number => (
                     <span className={classes.page} key={number}>
-                        <Link to={'/consoles/' + number} className={classes.simple_elem} onClick={() => paginate(number)}>{number}</Link>
+                        <button className={classes.simple_elem} onClick={() => paginate(number)}>{number}</button>
                     </span>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,34 @@
+.pagination {
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  height: 26px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-weight: 400;
+  font-size: 15px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.simple_elem {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.simple_elem:hover {
+  color: #0F7C10;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=Pagination.module.css.map */

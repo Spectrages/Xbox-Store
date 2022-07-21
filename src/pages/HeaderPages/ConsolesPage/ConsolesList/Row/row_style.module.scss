@@ -8,24 +8,15 @@
 }
 
 .cards_styles{
-  position: relative;
-  width: 1360px;
-  //height: 270px;
-  height: 810px;
-  left: 280px;
-  top: 299px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .card{
-  position: relative;
-  min-width: 453px;
-  justify-content: center;
-  text-align: left;
-  top: 20px;
-  background: white;
+  margin-top: 40px;
   display: flex;
+  text-align: left;
+  background: white;
   flex-direction: row;
 }
 
@@ -46,12 +37,15 @@
   font-weight: 500;
   display: flex;
   flex-direction: column;
+  width: 785px;
 }
 
 .card_price{
   @include main_text_styles;
   font-size: 28px;
   font-weight: bold;
+  width: 190px;
+  margin-left: 20px;
 }
 
 .card_text{

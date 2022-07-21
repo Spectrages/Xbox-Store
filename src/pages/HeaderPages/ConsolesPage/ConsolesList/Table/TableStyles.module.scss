@@ -7,12 +7,9 @@
 }
 .cards_styles{
   position: relative;
-  width: 1360px;
-  height: 1850px;
-  margin-left: 280px;
-  top: 299px;
   display: flex;
   flex-wrap: wrap;
+  width: 1360px;
 }
 
 .card{
@@ -36,7 +33,7 @@
   width: 324px;
   height: 44px;
   margin-left: 38px;
-  top: 20px;
+  margin-top: 20px;
 }
 
 .card_name{
@@ -63,33 +60,7 @@
   bottom: 70px;
 }
 
-.pagination{
-  position: absolute;
-  display: flex;
-  width: 1920px;
-  height: 46px;
-  left: 0;
-  top: 2187px;
-  justify-content: center;
-  align-items: center;
-}
-
-.page{
-  gap: 20px;
-  width: 220px;
-  height: 26px;
-  @include main_text_styles;
-  font-weight: 400;
-  font-size: 15px;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-}
-
-.simple_elem{
-  text-decoration: none;
-  &:hover{
-    color: #0F7C10;
-    text-decoration: underline;
-  }
+.img_short{
+  width: 370px;
+  height: 230px;
 }

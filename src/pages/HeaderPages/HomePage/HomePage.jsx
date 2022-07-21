@@ -123,7 +123,7 @@ export const HomePage = () => {
                         <span className={classes.title_text_5}>XBOX SERIES X</span>
                         <span className={classes.title_text_6}>“This is a huge leap forward”</span>
                         <span className={classes.title_text_7}>– Shazoo (RU)</span>
-                        <Link className={classes.link_text_style} to="/consoles"><DefaultButton>More</DefaultButton></Link>
+                        <Link className={classes.link_text_style} to="/consoles/xbox_series_x"><DefaultButton>More</DefaultButton></Link>
                     </div>
                 </div>
             </div>

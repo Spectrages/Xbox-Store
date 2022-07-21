@@ -16,6 +16,7 @@ import { TrackingPage } from "./pages/FooterPages/TrackingPage";
 import { LocationPage } from "./pages/FooterPages/LocationPage";
 import { NewsPage } from "./pages/FooterPages/NewsPage";
 import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
+import { xboxSeriesX } from './pages/HeaderPages/ConsolesPage/Consoles/Xbox series X/main'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/" element={<Layout/>}>
               <Route index element={<HomePage/>}/>
               <Route path="/consoles" element={<ConsolesPage/>}/>
+                <Route path="/consoles/xbox_series_x" element={<xboxSeriesX/>}/>
               <Route path="/accessories" element={<AccessoriesPage/>}/>
               <Route path="/games" element={<GamesPage/>}/>
               <Route path="/blog" element={<BlogPage/>}/>
