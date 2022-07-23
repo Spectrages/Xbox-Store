@@ -58,13 +58,13 @@ export const AccessoriesPage = () => {
             <div className={classes.line_first_block}>
             <div className={classes.text_button_block_first_line}>
                 <span className={classes.title_text}>Controllers</span>
-                <Link className={classes.link_text_style} to="/consoles"><ButtonWithArray>Learn More</ButtonWithArray></Link>
+                <Link className={classes.link_button_style} to="/controllers"><ButtonWithArray>Learn More</ButtonWithArray></Link>
             </div>
                 <div className={classes.pictures_first_line}>
                     {first_pictures.map((element) => {
                         return(
                             <div className={classes.picture_style}>
-                                <img src={element.name} alt='picture'/>
+                                <img src={element.name} alt='card'/>
                             </div>
                         )})}
                 </div>
@@ -73,13 +73,13 @@ export const AccessoriesPage = () => {
             <div className={classes.line_second_block}>
                 <div className={classes.text_button_block_second_line}>
                     <span className={classes.title_text}>XBOX Design Lab</span>
-                    <ButtonWithArray>Learn More</ButtonWithArray>
+                    <Link className={classes.link_button_style} to="/controllers"><ButtonWithArray>Learn More</ButtonWithArray></Link>
                 </div>
                 <div className={classes.pictures_second_line}>
                     {seconds_pictures.map((element) =>{
                         return(
                             <div className={classes.picture_style}>
-                                <img src={element.name} alt='picture'/>
+                                <img src={element.name} alt='card'/>
                             </div>
                         )})}
                 </div>
@@ -88,13 +88,13 @@ export const AccessoriesPage = () => {
             <div className={classes.line_first_block}>
                 <div className={classes.text_button_block_first_line}>
                     <span className={classes.title_text}>Headsets</span>
-                    <ButtonWithArray>Learn More</ButtonWithArray>
+                    <Link className={classes.link_button_style} to="/controllers"><ButtonWithArray>Learn More</ButtonWithArray></Link>
                 </div>
                 <div className={classes.pictures_first_line}>
                     {third_pictures.map((element) => {
                         return(
                             <div className={classes.picture_style}>
-                                <img src={element.name} alt='picture'/>
+                                <img src={element.name} alt='card'/>
                             </div>
                         )})}
                 </div>
@@ -103,13 +103,13 @@ export const AccessoriesPage = () => {
             <div className={classes.line_second_block}>
                 <div className={classes.text_button_block_second_line}>
                     <span className={classes.title_text}>Stands and Charging Solutions</span>
-                    <ButtonWithArray>Learn More</ButtonWithArray>
+                    <Link className={classes.link_button_style} to="/controllers"><ButtonWithArray>Learn More</ButtonWithArray></Link>
                 </div>
                 <div className={classes.pictures_second_line}>
                     {fourth_pictures.map((element) =>{
                         return(
                             <div className={classes.picture_style}>
-                                <img src={element.name} alt='picture'/>
+                                <img src={element.name} alt='card'/>
                             </div>
                         )})}
                 </div>

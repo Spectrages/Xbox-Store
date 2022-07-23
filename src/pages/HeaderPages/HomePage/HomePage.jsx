@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './HomePage.module.scss'
 import DefaultButton from '../../../components/buttons/Default_button/Default_button'
 
@@ -28,13 +28,10 @@ import pop_game_2 from './img/pop_game_2.png'
 import pop_game_3 from './img/pop_game_3.png'
 import pop_game_4 from './img/pop_game_4.png'
 import LastBlock from "../../PagesComponents/LastBlock/LastBlock";
-import ModalWindow from "../../PagesComponents/ModalWindow/ModalWindow";
-import ButtonWithArray from "../../../components/buttons/Button_with_array/Button_with_array";
 import {Link} from "react-router-dom";
 
 
 export const HomePage = () => {
-
     const sales_game_pictures = [
         {name: game_1, alt: "Game 1"},
         {name: game_2, alt: "Game 2"},
@@ -67,7 +64,7 @@ export const HomePage = () => {
                 <div className={classes.title_left_block}>
                     <span className={classes.title_text_1}>XBOX SERIES S</span>
                     <span className={classes.title_text_2}>Next-gen performance in the smallest Xbox ever</span>
-                    <DefaultButton>More</DefaultButton>
+                    <Link className={classes.link_button_style} to="/xboxWC"> <DefaultButton>More</DefaultButton> </Link>
                 </div>
                 <img className={classes.title_image} src={titleXbox} alt='Title Xbox'/>
             </div>
@@ -91,7 +88,7 @@ export const HomePage = () => {
                               style={{paddingBottom: '40px'}}
                         >
                             package</span>
-                        <Link className={classes.link_text_style} to="/consoles"><DefaultButton>More</DefaultButton></Link>
+                        <Link className={classes.link_button_style} to="/controllers"> <DefaultButton>More</DefaultButton> </Link>
                     </div>
                 </div>
 
@@ -123,7 +120,7 @@ export const HomePage = () => {
                         <span className={classes.title_text_5}>XBOX SERIES X</span>
                         <span className={classes.title_text_6}>“This is a huge leap forward”</span>
                         <span className={classes.title_text_7}>– Shazoo (RU)</span>
-                        <Link className={classes.link_text_style} to="/consoles/xbox_series_x"><DefaultButton>More</DefaultButton></Link>
+                        <Link className={classes.link_button_style} to="/xboxSeriesX"><DefaultButton>More</DefaultButton></Link>
                     </div>
                 </div>
             </div>

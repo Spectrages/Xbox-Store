@@ -9,7 +9,6 @@
   position: relative;
   color: white;
   cursor: pointer;
-  font-size: 17px;
   align-items: center;
 }
 .myButton:hover {
@@ -19,6 +18,12 @@
   background: white;
   border-bottom: 2px solid #11BC15;
   color: black;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=Default_button.module.css.map */

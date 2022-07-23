@@ -103,6 +103,7 @@
   text-align: left;
   width: 230px;
   height: 225px;
+  margin-left: 115px;
 }
 
 .second_monoBlock {
@@ -317,13 +318,23 @@ figcaption {
   font-size: 17px;
   line-height: 20px;
   color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   text-decoration: none;
 }
 .link_text_style:hover {
   text-decoration: green underline;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.link_button_style {
+  width: auto;
+  height: 20px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+.link_button_style:hover {
   font-weight: bold;
   color: darkgreen;
 }

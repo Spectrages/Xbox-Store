@@ -1,0 +1,29 @@
+{
+  "colors": [
+    {
+      "id": 1,
+      "hex": "#EB1C1E",
+      "name": "red"
+    },
+    {
+      "id": 2,
+      "hex": "#1D1D1D",
+      "name": "black"
+    },
+    {
+      "id": 3,
+      "hex": "#FFFFFF",
+      "name": "white"
+    },
+    {
+      "id": 4,
+      "hex": "#1F5BCC",
+      "name": "blue"
+    },
+    {
+      "id": 5,
+      "hex": "#DCF260",
+      "name": "volt"
+    }
+  ]
+}

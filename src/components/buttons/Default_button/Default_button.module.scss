@@ -9,7 +9,7 @@
   position: relative;
   color: white;
   cursor: pointer;
-  font-size: 17px;
+
   align-items: center;
   &:hover {
     background: #11BC15;
@@ -20,4 +20,10 @@
     border-bottom: 2px solid #11BC15;
     color: black;
   }
+}
+
+.text{
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 17px;
 }

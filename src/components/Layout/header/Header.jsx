@@ -21,7 +21,7 @@ const Header = () => {
 
             <div className={classes_header.text_1}>
                 <Link className={classes.linksText} to="/">Home</Link>
-                <Link className={classes.linksText} to="/consoles">Consoles</Link>
+                <Link className={classes.linksText} to="/controllers">Consoles</Link>
                 <Link className={classes.linksText} to="/accessories">Accessories</Link>
             </div>
 

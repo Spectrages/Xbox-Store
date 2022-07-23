@@ -16,7 +16,8 @@ import { TrackingPage } from "./pages/FooterPages/TrackingPage";
 import { LocationPage } from "./pages/FooterPages/LocationPage";
 import { NewsPage } from "./pages/FooterPages/NewsPage";
 import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
-import { xboxSeriesX } from './pages/HeaderPages/ConsolesPage/Consoles/Xbox series X/main'
+import { XboxSeriesX } from './pages/HeaderPages/ConsolesPage/Consoles/Xbox series X/main'
+import { XboxWC } from "./pages/HeaderPages/ConsolesPage/Consoles/Xbox Wireless Controller/main";
 
 const App = () => {
   return (
@@ -24,8 +25,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout/>}>
               <Route index element={<HomePage/>}/>
-              <Route path="/consoles" element={<ConsolesPage/>}/>
-                <Route path="/consoles/xbox_series_x" element={<xboxSeriesX/>}/>
+              <Route path="/controllers" element={<ConsolesPage/>}/>
+                <Route path="/XboxSeriesX" element={<XboxSeriesX/>}/>
+                <Route path="/xboxWC" element={<XboxWC/>}/>
               <Route path="/accessories" element={<AccessoriesPage/>}/>
               <Route path="/games" element={<GamesPage/>}/>
               <Route path="/blog" element={<BlogPage/>}/>

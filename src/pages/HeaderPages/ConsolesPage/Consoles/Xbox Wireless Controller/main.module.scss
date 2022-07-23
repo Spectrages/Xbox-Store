@@ -1,0 +1,170 @@
+@mixin main_text_styles{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+}
+
+@mixin gray_text_styles{
+  @include main_text_styles;
+  font-size: 20px;
+  color: #878787;
+}
+
+.main_content{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+}
+.title_block{
+  @include gray_text_styles;
+  text-align: left;
+  margin-top: 30px;
+}
+.links_text{
+  @include main_text_styles;
+  font-size: 20px;
+  color: #878787;
+  width: 222px;
+  height: 23px;
+  line-height: 20px;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: green underline;
+    color: darkgreen;
+  }
+}
+
+.img_disable{
+  width: 164px;
+  height: 85px;
+}
+
+.img_enable{
+  width: 785px;
+  height: 460px;
+}
+
+.text_name{
+  @include main_text_styles;
+  font-size: 42px;
+  height: 55px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.card_left_block{
+  display: flex;
+  flex-flow: row;
+  margin-top: 30px;
+}
+
+.images_block{
+  flex-flow: column;
+}
+
+.arrow_row{
+  display: contents;
+}
+
+.left_arrow{
+  position: absolute;
+  left: 90px;
+  margin-top: 34px;
+  width: 20px;
+  height: 20px;
+  &:hover{
+    border-radius: 50%;
+    border: 1px solid #0F7C10;
+  }
+}
+.right_arrow{
+  position: absolute;
+  margin-top: 34px;
+  width: 20px;
+  height: 20px;
+  &:hover{
+    border-radius: 50%;
+    border: 1px solid #0F7C10;
+  }
+}
+
+.card_right_block{
+  display: flex;
+  flex-flow: column;
+}
+.color_block{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+.color_text{
+  @include main_text_styles;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 135px;
+}
+
+.round{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: 2px solid black;
+
+  &:active{
+    outline: 4px solid #0F7C10;
+  }
+}
+
+.counter_block{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
+  margin-left: 135px;
+}
+
+.squad{
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.prices_text{
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+  margin-left: 135px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.new_price_text{
+  @include main_text_styles;
+  font-size: 32px;
+}
+
+.old_price_text{
+  @include gray_text_styles;
+  font-size: 32px;
+  font-weight: 400;
+  text-decoration-line: line-through;
+}
+
+.button_position{
+  display: flex;
+  margin-left: 135px;
+  margin-top: 40px;
+}
