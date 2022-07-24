@@ -102,7 +102,6 @@
 .color_block{
   display: flex;
   flex-flow: row;
-  justify-content: center;
   align-items: center;
   gap:20px;
 }
@@ -167,4 +166,133 @@
   display: flex;
   margin-left: 135px;
   margin-top: 40px;
+}
+
+.description_right_block{
+  display: flex;
+  margin-top: 65px;
+  margin-left: 135px;
+  flex-flow: column;
+}
+
+.description_name_disable {
+  @include gray_text_styles;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.description_name{
+  @include main_text_styles;
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.name_style_enable{
+  @include main_text_styles;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: black;
+  background: #F9F9F9;
+  text-decoration: #0F7C10 underline;
+}
+
+.name_style_disable{
+  @include gray_text_styles;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: #F9F9F9;
+}
+
+.text_description{
+  @include main_text_styles;
+  display: flex;
+  width: 440px;
+  margin-left: 135px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+}
+
+.description_block{
+  display: flex;
+  flex-flow: row;
+  margin-top: 30px;
+}
+
+.left_block{
+  display: flex;
+  flex-flow: column;
+  width: 900px;
+}
+
+.right_block{
+  display: flex;
+  flex-flow: column;
+  width: 440px;
+  margin-left: 20px;
+}
+
+.name{
+  @include main_text_styles;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.some_text{
+  @include main_text_styles;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+}
+
+.ad_block{
+  display: flex;
+  margin-top: 30px;
+  flex-flow: column;
+  text-align: left;
+}
+
+.ad_title{
+  @include main_text_styles;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.card{
+  display: flex;
+  flex-flow: column;
+  margin-top: 30px;
+}
+
+.ad_image{
+  display: flex;
+  width: 210px;
+  height: 210px;
+  margin-left: 8.5px;
+}
+
+.ad_description{
+  @include main_text_styles;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.ad_price{
+  @include main_text_styles;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.cards{
+  display: flex;
+  flex-flow: row;
 }
