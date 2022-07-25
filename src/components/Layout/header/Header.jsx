@@ -36,7 +36,7 @@ const Header = () => {
             <div className={classes_header.cartBlock}>
                 <img className={classes_header.cart} src = {cartSvg} alt = 'This is cart-logo'/>
                 <div className={classes_header.cartsCounter}>
-                    <span>Cart ({count})</span> <br/>
+                    <Link className={classes.linksText} to='/cart'>Cart ({count})</Link><br/>
                     <span>${cost}</span>
                 </div>
             </div>

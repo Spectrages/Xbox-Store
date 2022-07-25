@@ -18,6 +18,7 @@ import { NewsPage } from "./pages/FooterPages/NewsPage";
 import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
 import { XboxSeriesX } from './pages/HeaderPages/ConsolesPage/Consoles/Xbox series X/main'
 import { XboxWC } from "./pages/HeaderPages/ConsolesPage/Consoles/Xbox Wireless Controller/main";
+import { CartPage } from "./pages/HeaderPages/CartPage/Cart";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout/>}>
               <Route index element={<HomePage/>}/>
+              <Route path="/cart" element={<CartPage/>}/>
               <Route path="/controllers" element={<ConsolesPage/>}/>
                 <Route path="/XboxSeriesX" element={<XboxSeriesX/>}/>
                 <Route path="/xboxWC" element={<XboxWC/>}/>

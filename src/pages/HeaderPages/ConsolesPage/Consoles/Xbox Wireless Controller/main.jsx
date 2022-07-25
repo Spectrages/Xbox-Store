@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classes from './main.module.scss'
 import {Link} from "react-router-dom";
 import DefaultButton from '../../../../../components/buttons/Default_button/Default_button'
-import {ad_cards, card_img_white, colors, descriptions} from "./Script";
+import {ad_cards, colors, descriptions, direction, setArray} from "./Script";
 
 import {ReactComponent as Icon_right} from './assets/right_array.svg';
 import {ReactComponent as Icon_left} from './assets/left_array.svg';
@@ -16,6 +16,7 @@ const old_price = 64.99;
 
 export const XboxWC = () => {
     const [counter, setCounter] = useState(0)
+    const [color, setColor] = useState('blue')
 
     const counterCorrect = (counter) => {
         if(counter <= 0) counter = 0;
@@ -40,23 +41,46 @@ export const XboxWC = () => {
 
             <div className={classes.card_left_block}>
                 <div className={classes.images_block}>
-                    {card_img_white.map((item) => {
+                    {setArray(color).map((item) => {
                         return(
                             <img className={item.enable ? classes.img_enable : classes.img_disable} src={item.name} alt="card"/>
                         )})}
                         <div className={classes.arrow_row}>
-                            <Icon_left className={classes.left_arrow}/>
-                            <Icon_right className={classes.right_arrow}/>
+                            <Icon_left className={classes.left_arrow} onClick={() => direction(color, 'left')}/>
+                            <Icon_right className={classes.right_arrow} onClick={() => direction(color, 'right')}/>
                         </div>
 
                 </div>
 
                 <div className={classes.card_right_block}>
+
                     <div className={classes.color_block}>
                         <span className={classes.color_text}>Color</span>
-                        {colors.map((item, index) => {
-                            return(<div className={classes.round} style={{background: colors[index]}}/>
-                            )})}
+                            <button
+                                onClick={() => setColor('red')}
+                                className={color === 'red' ? classes.round_enable : classes.round_disable}
+                                style={{background: '#EB1C1E'}}
+                            />
+                            <button
+                                onClick={() => setColor('black')}
+                                className={color === 'black' ? classes.round_enable : classes.round_disable}
+                                style={{background: '#000000'}}
+                            />
+                            <button
+                                onClick={() => setColor('white')}
+                                className={color === 'white' ? classes.round_enable : classes.round_disable}
+                                style={{background: '#FFFFFF'}}
+                            />
+                            <button
+                                onClick={() => setColor('blue')}
+                                className={color === 'blue' ? classes.round_enable : classes.round_disable}
+                                style={{background: '#1F5BCC'}}
+                            />
+                            <button
+                                onClick={() => setColor('volt')}
+                                className={color === 'volt' ? classes.round_enable : classes.round_disable}
+                                style={{background: '#DCF260'}}
+                            />
                     </div>
 
                     <div className={classes.counter_block}>
