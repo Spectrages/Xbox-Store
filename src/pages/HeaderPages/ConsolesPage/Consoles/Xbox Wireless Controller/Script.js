@@ -46,56 +46,36 @@ export const ad_cards = [
 
 export const colors = ['#EB1C1E', '#000000', '#FFFFFF', '#1F5BCC', '#DCF260']
 
-export const setArray = (color) => {
-    switch (color) {
-        case 'white': return card_img_white;
-        case 'black': return card_img_black;
-        case 'blue': return card_img_blue;
-        case 'red': return card_img_red;
-        case 'volt': return card_img_volt;
+export const setArrayColor = (color) => {
 
-        default: break;
-    }
 }
 
- const card_img_white = [
-    {id: 1, name: image_1_white, enable: true},
-    {id: 2, name: image_2_white, enable: false},
-    {id: 3, name: image_3_white, enable: false},
-    {id: 4, name: image_4_white, enable: false},
-    {id: 5, name: image_5_white, enable: false},
-]
-
- const card_img_black = [
-    {id: 1, name: image_1_black, enable: true},
-    {id: 2, name: image_2_black, enable: false},
-    {id: 3, name: image_3_black, enable: false},
-    {id: 4, name: image_4_black, enable: false},
-    {id: 5, name: image_5_black, enable: false},
-]
-
- const card_img_blue = [
-    {id: 1, name: image_1_blue, enable: true},
-    {id: 2, name: image_2_blue, enable: false},
-    {id: 3, name: image_3_blue, enable: false},
-    {id: 4, name: image_4_blue, enable: false},
-    {id: 5, name: image_5_blue, enable: false},
-]
-
-const card_img_red = [
-    {id: 1, name: image_1_red, enable: true},
-    {id: 2, name: image_2_red, enable: false},
-    {id: 3, name: image_3_red, enable: false},
-    {id: 4, name: image_4_red, enable: false},
-    {id: 5, name: image_5_red, enable: false},
-]
-
-const card_img_volt = [
-    {id: 1, name: image_1_volt, enable: true},
-    {id: 2, name: image_2_volt, enable: false},
-    {id: 3, name: image_3_volt, enable: false},
-    {id: 4, name: image_4_volt, enable: false},
-    {id: 5, name: image_5_volt, enable: false},
+ export const cards = [
+    {color: 'white', name: image_1_white, enable: true},
+    {color: 'white', name: image_2_white, enable: false},
+    {color: 'white', name: image_3_white, enable: false},
+    {color: 'white', name: image_4_white, enable: false},
+    {color: 'white', name: image_5_white, enable: false},
+    {color: 'black', name: image_1_black, enable: true},
+    {color: 'black', name: image_2_black, enable: false},
+    {color: 'black', name: image_3_black, enable: false},
+    {color: 'black', name: image_4_black, enable: false},
+    {color: 'black', name: image_5_black, enable: false},
+    {color: 'blue', name: image_1_blue, enable: true},
+    {color: 'blue', name: image_2_blue, enable: false},
+    {color: 'blue', name: image_3_blue, enable: false},
+    {color: 'blue', name: image_4_blue, enable: false},
+    {color: 'blue', name: image_5_blue, enable: false},
+    {color: 'red', name: image_1_red, enable: true},
+    {color: 'red', name: image_2_red, enable: false},
+    {color: 'red', name: image_3_red, enable: false},
+    {color: 'red', name: image_4_red, enable: false},
+    {color: 'red', name: image_5_red, enable: false},
+    {color: 'volt', name: image_1_volt, enable: true},
+    {color: 'volt', name: image_2_volt, enable: false},
+    {color: 'volt', name: image_3_volt, enable: false},
+    {color: 'volt', name: image_4_volt, enable: false},
+    {color: 'volt', name: image_5_volt, enable: false},
 ]
 
 
@@ -111,13 +91,3 @@ export const descriptions = [
 ]
 
 
-export const direction = (array, dir) => {
-    if(dir === 'right'){
-        console.log(dir)
-        console.log(array)
-    }
-    else {
-        console.log(dir)
-        console.log(array)
-    }
-}
