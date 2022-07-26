@@ -35,7 +35,6 @@ export const XboxWC = () => {
         const newArray = direction(selectArray, dir)
         console.log(newArray)
         setSelectArray(prev =>  { return [...prev] })
-            //prev =>  { return [...prev, newArray] }
     }
 
     const counterCorrect = (counter) => {
