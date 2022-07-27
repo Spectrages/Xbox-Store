@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import classes from './main.module.scss'
 import {Link} from "react-router-dom";
 import DefaultButton from '../../../../../components/buttons/Default_button/Default_button'
-import {ad_cards, descriptions, setArrayColor, cards} from "./Script";
-import {direction} from "../Slider";
+import {ad_cards, descriptions, colorRow, cards, descriptionText} from "./Script";
+import {direction_main} from "../Slider";
 
 import {ReactComponent as Icon_right} from './assets/right_array.svg';
 import {ReactComponent as Icon_left} from './assets/left_array.svg';
 import {ReactComponent as Icon_plus} from './assets/plus.svg';
 import {ReactComponent as Icon_minus} from './assets/minus.svg';
+import {Cart} from "../../../CartPage/Storage";
 
 const filterArray = (array, color) => {
     return array.filter(item => item.color === color)
@@ -26,27 +27,29 @@ export const XboxWC = () => {
 
     const [selectArray, setSelectArray] = useState(myArray)
 
+    const [adArray, setAdArray] = useState(ad_cards)
+
+
     const handleColorClick = (col) => {
         setSelectArray(filterArray(array, col));
         setColor(col);
     }
 
-    function handleSlider(selectArray, dir){
-        const newArray = direction(selectArray, dir)
-        console.log(newArray)
-        setSelectArray(prev =>  { return [...prev] })
+    const handleSliderCards = (array, dir) => {
+        direction_main(array, dir, 'main')
+        setSelectArray([...array])
+    }
+
+    const handleSliderAdCards = (array, dir) => {
+        direction_main(array, dir, 'ad')
+        setAdArray([...array])
     }
 
     const counterCorrect = (counter) => {
         if(counter <= 0) counter = 0;
         setCounter(counter);
     }
-    const texts = [
-        'Some text 1',
-        'Some text 2',
-        'Some text 3'
-    ]
-    const [text, setText] = useState(texts[0])
+    const [textDescription, setTextDescription] = useState(descriptionText[0].text)
 
     return (
         <div className={classes.main_content}>
@@ -66,8 +69,8 @@ export const XboxWC = () => {
                             <img className={item.enable ? classes.img_enable : classes.img_disable} src={item.name} alt='card'/>
                         )})}
                         <div className={classes.arrow_row}>
-                            <Icon_left className={classes.left_arrow} onClick={() => handleSlider(selectArray, 'right')} />
-                            <Icon_right className={classes.right_arrow} onClick={() => handleSlider(selectArray, 'left')} />
+                            <Icon_left className={classes.left_arrow} onClick={() => handleSliderCards(selectArray, 'right')} />
+                            <Icon_right className={classes.right_arrow} onClick={() => handleSliderCards(selectArray, 'left')} />
                         </div>
 
                 </div>
@@ -76,31 +79,13 @@ export const XboxWC = () => {
 
                     <div className={classes.color_block}>
                         <span className={classes.color_text}>Color</span>
-                            <button
-                                onClick={() => handleColorClick('red')}
-                                className={color === 'red' ? classes.round_enable : classes.round_disable}
-                                style={{background: '#EB1C1E'}}
-                            />
-                            <button
-                                onClick={() => handleColorClick('black')}
-                                className={color === 'black' ? classes.round_enable : classes.round_disable}
-                                style={{background: '#000000'}}
-                            />
-                            <button
-                                onClick={() => handleColorClick('white')}
-                                className={color === 'white' ? classes.round_enable : classes.round_disable}
-                                style={{background: '#FFFFFF'}}
-                            />
-                            <button
-                                onClick={() => handleColorClick('blue')}
-                                className={color === 'blue' ? classes.round_enable : classes.round_disable}
-                                style={{background: '#1F5BCC'}}
-                            />
-                            <button
-                                onClick={() => handleColorClick('volt')}
-                                className={color === 'volt' ? classes.round_enable : classes.round_disable}
-                                style={{background: '#DCF260'}}
-                            />
+                        {colorRow.map((item) => {
+                            return (
+                                <button onClick={() => handleColorClick(item.name)}
+                                className={color === item.name ? classes.round_enable : classes.round_disable}
+                                style={{background: item.hex}}
+                                />
+                            )})}
                     </div>
 
                     <div className={classes.counter_block}>
@@ -118,12 +103,17 @@ export const XboxWC = () => {
 
                     <div className={classes.description_right_block}>
                         <div className={classes.description_name}>
-                            <button className={classes.name_style_enable} onClick={() => setText(texts[0])}>Connectivity</button>
-                            <button className={classes.name_style_enable} onClick={() => setText(texts[1])}>Compatible With</button>
-                            <button className={classes.name_style_enable} onClick={() => setText(texts[2])}>Battery</button>
+                            {descriptionText.map((item) => {
+                                return(
+                                    <button
+                                        className={item.text === textDescription ? classes.name_style_enable : classes.name_style_disable}
+                                        onClick={() => setTextDescription(item.text)}
+                                    >
+                                        {item.name}</button>
+                                )})}
                         </div>
                     </div>
-                    <span className={classes.text_description}>{text}</span>
+                    <span className={classes.text_description}>{textDescription}</span>
                 </div>
             </div>
 
@@ -142,19 +132,21 @@ export const XboxWC = () => {
             <div className={classes.ad_block}>
                 <span className={classes.ad_title}>You will also be interested</span>
                 <div className={classes.cards}>
-                {ad_cards.map((item) => {
+                {adArray.map((item) => {
                     return (
                         <div className={classes.card}>
                             <img className={classes.ad_image} src={item.image} alt='pic'/>
                             <span className={classes.ad_description}>{item.text}</span>
                             <span className={classes.ad_price}>${item.price}</span>
                         </div>
-
-                    )
-                })}
+                    )})}
                 </div>
-            </div>
+                <div className={classes.ad_arrows}>
+                    <Icon_left className={classes.ad_icon_left} onClick={() => handleSliderAdCards(adArray, 'left')}/>
+                    <Icon_right className={classes.ad_icon_right} onClick={() => handleSliderAdCards(adArray, 'right')}/>
+                </div>
 
+            </div>
         </div>
     );
 };

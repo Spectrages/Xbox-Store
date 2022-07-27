@@ -1,0 +1,61 @@
+.main_content {
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 42px;
+  text-align: left;
+}
+
+.myButton {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  background: white;
+  color: #0F7C10;
+  margin-top: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 210px;
+  height: 42px;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+}
+.myButton:active {
+  background: #0F7C10;
+  color: white;
+}
+
+.empty_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.product {
+  display: flex;
+  flex-flow: row;
+  height: 140px;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=Cart.module.css.map */

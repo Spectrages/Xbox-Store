@@ -44,11 +44,13 @@ export const ad_cards = [
     {image: ad_6, text: 'Cable Matters Certified Active Ultra High Speed HDMI Cable', price: 64.99},
 ]
 
-export const colors = ['#EB1C1E', '#000000', '#FFFFFF', '#1F5BCC', '#DCF260']
-
-export const setArrayColor = (color) => {
-
-}
+export const colorRow = [
+    {name: 'red', hex: '#EB1C1E'},
+    {name: 'black', hex: '#000000'},
+    {name: 'white', hex: '#FFFFFF'},
+    {name: 'blue', hex: '#1F5BCC'},
+    {name: 'volt', hex: '#DCF260'},
+]
 
  export const cards = [
     {color: 'white', name: image_1_white, enable: true},
@@ -90,4 +92,10 @@ export const descriptions = [
             'PC, mobile phones and tablets. Plug in any compatible headset with the 3.5 mm stereo headset jack.'}
 ]
 
+export const descriptionText = [
+    {name: 'Connectivity', text: 'Connect to Xbox consoles with Xbox Wireless. ' +
+            'Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth'},
+    {name: 'Compatible With', text: 'Some text 2'},
+    {name: 'Battery', text: 'Some text 3'},
+]
 
