@@ -2,18 +2,15 @@ import searchSvg from "../../../assets/ei_search.svg";
 import {Link} from "react-router-dom";
 import logoSvg from "../../../assets/xbox.svg";
 import cartSvg from "../../../assets/cart.svg";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import classes_header from './header.module.scss'
 import classes from '../Layout.module.scss'
+import {Cart} from "../../../pages/HeaderPages/CartPage/Storage";
 
 const Header = () => {
 
-    const [count, setCount] = useState(0)
-    const [cost, setCost] = useState(0)
-
     return (
         <header className={classes_header.header}>
-
             <div className={classes_header.searchBlock}>
                 <img className={classes_header.search_svg} src={searchSvg} alt = "This is Search icon"/>
                 <span className={classes_header.searchText}>Search</span>
@@ -36,8 +33,10 @@ const Header = () => {
             <div className={classes_header.cartBlock}>
                 <img className={classes_header.cart} src = {cartSvg} alt = 'This is cart-logo'/>
                 <div className={classes_header.cartsCounter}>
-                    <Link className={classes.linksText} to='/cart'>Cart ({count})</Link><br/>
-                    <span>${cost}</span>
+
+                    <Link className={classes.linksText} to='/cart'>Cart ({})</Link><br/>
+                    <span>${}</span>
+
                 </div>
             </div>
         </header>

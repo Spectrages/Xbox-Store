@@ -11,14 +11,14 @@ import {ReactComponent as Icon_plus} from './assets/plus.svg';
 import {ReactComponent as Icon_minus} from './assets/minus.svg';
 import {Cart} from "../../../CartPage/Storage";
 
+const OLD_PRICE = 64.99;
+
 const filterArray = (array, color) => {
     return array.filter(item => item.color === color)
 }
 
-const price = 59.99;
-const old_price = 64.99;
-
 export const XboxWC = () => {
+
     const [counter, setCounter] = useState(0)
 
     const [array] = useState(cards)
@@ -28,6 +28,8 @@ export const XboxWC = () => {
     const [selectArray, setSelectArray] = useState(myArray)
 
     const [adArray, setAdArray] = useState(ad_cards)
+
+    const [textDescription, setTextDescription] = useState(descriptionText[0].text)
 
 
     const handleColorClick = (col) => {
@@ -49,7 +51,10 @@ export const XboxWC = () => {
         if(counter <= 0) counter = 0;
         setCounter(counter);
     }
-    const [textDescription, setTextDescription] = useState(descriptionText[0].text)
+
+    const PushItem = (array) => {
+        if(counter > 0) return array.filter((item) => item.enable === true ? Cart.push(item) : null)
+    }
 
     return (
         <div className={classes.main_content}>
@@ -72,7 +77,6 @@ export const XboxWC = () => {
                             <Icon_left className={classes.left_arrow} onClick={() => handleSliderCards(selectArray, 'right')} />
                             <Icon_right className={classes.right_arrow} onClick={() => handleSliderCards(selectArray, 'left')} />
                         </div>
-
                 </div>
 
                 <div className={classes.card_right_block}>
@@ -94,11 +98,15 @@ export const XboxWC = () => {
                         <Icon_plus onClick={() => counterCorrect(counter + 1)}/>
                     </div>
                     <div className={classes.prices_text}>
-                        <span className={classes.new_price_text}>${price}</span>
-                        <span className={classes.old_price_text}>{old_price}</span>
+                        <span className={classes.new_price_text}>${selectArray[0].price}</span>
+                        <span className={classes.old_price_text}>{OLD_PRICE}</span>
                     </div>
                     <div className={classes.button_position}>
-                        <DefaultButton style={{width: '184px'}}>Add to cart</DefaultButton>
+                        <DefaultButton
+                            style={{width: '184px'}}
+                            onClick={() => PushItem(selectArray)}
+                        >
+                            Add to cart</DefaultButton>
                     </div>
 
                     <div className={classes.description_right_block}>

@@ -1,0 +1,42 @@
+@mixin main_text_styles{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+}
+.product{
+  display: flex;
+  flex-flow: row;
+  height: 140px;
+  width: 1360px;
+  margin-top: 20px;
+}
+
+.text_block{
+  display: flex;
+  align-items: center;
+}
+
+.item_name{
+  @include main_text_styles;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 20px;
+  width: 645px;
+}
+
+.item_price{
+  @include main_text_styles;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 365px;
+  width: 116px;
+}
+
+.remove_icon {
+  margin-left: 48px;
+  &:hover{
+    stroke-opacity: 1;
+  }
+}

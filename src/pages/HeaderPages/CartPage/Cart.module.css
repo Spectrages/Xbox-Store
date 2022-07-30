@@ -51,11 +51,4 @@
   text-align: left;
 }
 
-.product {
-  display: flex;
-  flex-flow: row;
-  height: 140px;
-  justify-content: space-between;
-}
-
 /*# sourceMappingURL=Cart.module.css.map */
