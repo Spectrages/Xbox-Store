@@ -1,0 +1,21 @@
+.counter_block {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.squad {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  height: 20px;
+}
+
+/*# sourceMappingURL=CounterBlock.module.css.map */

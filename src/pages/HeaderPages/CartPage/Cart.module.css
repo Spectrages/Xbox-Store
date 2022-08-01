@@ -1,6 +1,7 @@
 .main_content {
   display: flex;
   flex-flow: column;
+  width: 100%;
 }
 
 .title {
@@ -23,7 +24,6 @@
   font-weight: 400;
   background: white;
   color: #0F7C10;
-  margin-top: 250px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -49,6 +49,65 @@
   font-size: 20px;
   font-weight: 400;
   text-align: left;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: end;
+}
+
+.total_block {
+  display: flex;
+  flex-flow: column;
+  width: 210px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.delivery_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  color: #0F7C10;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.total_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.price_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  width: 125px;
+  display: inline-block;
+}
+
+.prices_block {
+  display: flex;
+  flex-flow: column;
 }
 
 /*# sourceMappingURL=Cart.module.css.map */

@@ -30,8 +30,8 @@
   @include main_text_styles;
   font-weight: bold;
   font-size: 20px;
-  margin-left: 365px;
   width: 116px;
+  margin-left: 140px;
 }
 
 .remove_icon {
@@ -39,4 +39,23 @@
   &:hover{
     stroke-opacity: 1;
   }
+}
+
+.counter_block{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.squad{
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+}
+.icons{
+  height: 20px;
 }

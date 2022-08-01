@@ -95,7 +95,7 @@ export const HomePage = () => {
                 <div className={classes.first_quads_block}>
                     {quad_block_one.map((element) => {
                         return(
-                            <div className={classes.full_card}>
+                            <div key={element.name} className={classes.full_card}>
                                 <img src={element.name} alt={element.alt}/>
                                 <span className={classes.description_text}>{element.description}</span>
                                 <span className={classes.price_text}>{element.price}</span>
@@ -106,7 +106,7 @@ export const HomePage = () => {
                 <div className={classes.second_quads_block}>
                     {quad_block_two.map((element) => {
                         return(
-                            <div className={classes.full_card}>
+                            <div key={element.name} className={classes.full_card}>
                                 <img src={element.name} alt={element.alt}/>
                                 <span className={classes.description_text}>{element.description}</span>
                                 <span className={classes.price_text}>{element.price}</span>
@@ -134,7 +134,7 @@ export const HomePage = () => {
                     <div className={classes.right_block}>
                         {sales_game_pictures.map((element) => {
                             return(
-                                <img src={element.name} alt={element.alt} />
+                                <img key={element.name} src={element.name} alt={element.alt} />
                             )})}
                     </div>
                 </div>
@@ -144,7 +144,7 @@ export const HomePage = () => {
                     <div className={classes.images}>
                         {popular_game_pictures.map((element) => {
                             return(
-                                <figure>
+                                <figure key={element.name} >
                                     <img className={classes.img} src={element.name} alt={element.alt} />
                                     <figcaption>{element.description}</figcaption>
                                 </figure>

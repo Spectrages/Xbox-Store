@@ -2,12 +2,30 @@ import searchSvg from "../../../assets/ei_search.svg";
 import {Link} from "react-router-dom";
 import logoSvg from "../../../assets/xbox.svg";
 import cartSvg from "../../../assets/cart.svg";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import classes_header from './header.module.scss'
 import classes from '../Layout.module.scss'
-import {Cart} from "../../../pages/HeaderPages/CartPage/Storage";
+import {useSelector} from "react-redux";
 
 const Header = () => {
+
+    const store = useSelector(state => state.toolkit.store)
+
+    const sumCounter = (array) => {
+        let result = 0;
+        for(let index = 0; index < array.length; index++){
+            result += array[index].counter
+        }
+        return result;
+    }
+
+    const sumPrice = (array) => {
+        let result = 0;
+        for(let index = 0; index < array.length; index++) {
+            result += array[index].price * array[index].counter;
+        }
+        return result
+    }
 
     return (
         <header className={classes_header.header}>
@@ -34,8 +52,8 @@ const Header = () => {
                 <img className={classes_header.cart} src = {cartSvg} alt = 'This is cart-logo'/>
                 <div className={classes_header.cartsCounter}>
 
-                    <Link className={classes.linksText} to='/cart'>Cart ({})</Link><br/>
-                    <span>${}</span>
+                    <Link className={classes.linksText} to='/cart'>Cart ({sumCounter(store)})</Link><br/>
+                    <span>${sumPrice(store)}</span>
 
                 </div>
             </div>

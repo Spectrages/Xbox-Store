@@ -2,14 +2,15 @@ import React, {useState} from 'react';
 import classes from './main.module.scss'
 import {Link} from "react-router-dom";
 import DefaultButton from '../../../../../components/buttons/Default_button/Default_button'
+import {useDispatch, useSelector} from "react-redux";
+import {addProduct} from "../../../../../toolkitRedux/toolkitSlicer";
 import {ad_cards, descriptions, colorRow, cards, descriptionText} from "./Script";
 import {direction_main} from "../Slider";
+import CounterBlock from "../../../../PagesComponents/CounterBlock/CounterBlock";
 
 import {ReactComponent as Icon_right} from './assets/right_array.svg';
 import {ReactComponent as Icon_left} from './assets/left_array.svg';
-import {ReactComponent as Icon_plus} from './assets/plus.svg';
-import {ReactComponent as Icon_minus} from './assets/minus.svg';
-import {Cart} from "../../../CartPage/Storage";
+
 
 const OLD_PRICE = 64.99;
 
@@ -19,7 +20,8 @@ const filterArray = (array, color) => {
 
 export const XboxWC = () => {
 
-    const [counter, setCounter] = useState(0)
+    const dispatch = useDispatch()
+    const counter = useSelector(state => state.toolkit.counter)
 
     const [array] = useState(cards)
     const [color, setColor] = useState('white')
@@ -47,13 +49,15 @@ export const XboxWC = () => {
         setAdArray([...array])
     }
 
-    const counterCorrect = (counter) => {
-        if(counter <= 0) counter = 0;
-        setCounter(counter);
-    }
-
-    const PushItem = (array) => {
-        if(counter > 0) return array.filter((item) => item.enable === true ? Cart.push(item) : null)
+    const pushItem = (array, counter) => {
+        for(let index = 0; index < array.length; index++) array[index].counter = counter
+       if(counter > 0) {
+           for(let index = 0; index <= array.length; index++){
+               if(array[index].enable === true) {
+                   return (array[index])
+               }
+           }
+       }
     }
 
     return (
@@ -71,7 +75,7 @@ export const XboxWC = () => {
                 <div className={classes.images_block}>
                     {selectArray.map((item) => {
                         return(
-                            <img className={item.enable ? classes.img_enable : classes.img_disable} src={item.name} alt='card'/>
+                            <img key={item.name} className={item.enable ? classes.img_enable : classes.img_disable} src={item.name} alt='card'/>
                         )})}
                         <div className={classes.arrow_row}>
                             <Icon_left className={classes.left_arrow} onClick={() => handleSliderCards(selectArray, 'right')} />
@@ -85,26 +89,22 @@ export const XboxWC = () => {
                         <span className={classes.color_text}>Color</span>
                         {colorRow.map((item) => {
                             return (
-                                <button onClick={() => handleColorClick(item.name)}
+                                <button key={item.name} onClick={() => handleColorClick(item.name)}
                                 className={color === item.name ? classes.round_enable : classes.round_disable}
                                 style={{background: item.hex}}
                                 />
                             )})}
                     </div>
-
-                    <div className={classes.counter_block}>
-                        <Icon_minus onClick={() => counterCorrect(counter - 1)}/>
-                        <span className={classes.squad}>{counter}</span>
-                        <Icon_plus onClick={() => counterCorrect(counter + 1)}/>
-                    </div>
+                   <CounterBlock/>
                     <div className={classes.prices_text}>
                         <span className={classes.new_price_text}>${selectArray[0].price}</span>
                         <span className={classes.old_price_text}>{OLD_PRICE}</span>
                     </div>
                     <div className={classes.button_position}>
                         <DefaultButton
+                            disabled={counter === 0}
                             style={{width: '184px'}}
-                            onClick={() => PushItem(selectArray)}
+                            onClick={() => dispatch(addProduct(pushItem(selectArray, counter)))}
                         >
                             Add to cart</DefaultButton>
                     </div>
@@ -114,6 +114,7 @@ export const XboxWC = () => {
                             {descriptionText.map((item) => {
                                 return(
                                     <button
+                                        key={item.name}
                                         className={item.text === textDescription ? classes.name_style_enable : classes.name_style_disable}
                                         onClick={() => setTextDescription(item.text)}
                                     >
@@ -142,7 +143,7 @@ export const XboxWC = () => {
                 <div className={classes.cards}>
                 {adArray.map((item) => {
                     return (
-                        <div className={classes.card}>
+                        <div key={item.image} className={classes.card}>
                             <img className={classes.ad_image} src={item.image} alt='pic'/>
                             <span className={classes.ad_description}>{item.text}</span>
                             <span className={classes.ad_price}>${item.price}</span>
