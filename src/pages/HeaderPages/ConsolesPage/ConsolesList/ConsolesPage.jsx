@@ -12,7 +12,6 @@ import {ReactComponent as Icon_2} from './assets/app-menu_2.svg';
 
 export const ConsolesPage = () => {
     const [number, setNumber] = useState(250)
-    //if false == table; true == row
     const [filter, setFilter] = useState(false)
 
     return (

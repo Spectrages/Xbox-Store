@@ -8,8 +8,8 @@ const Table = ({price, consoles}) => {
         <div className={classes.cards_styles}>
             {filteredConsoles.map(item=> {
                     return(
-                        <div className={classes.card}>
-                            <Link to='/home'>
+                        <div key={item.id} className={classes.card}>
+                            <Link to='/xboxWC'>
                                 <img className={(item.id !== 5 && item.id !== 9) ? classes.img_short : ''} src={item.image} alt='card'/>
                             </Link>
                             <div className={classes.card_description}>

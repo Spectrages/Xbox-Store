@@ -8,8 +8,8 @@ import {ad_cards, descriptions, colorRow, cards, descriptionText} from "./Script
 import {direction_main} from "../Slider";
 import CounterBlock from "../../../../PagesComponents/CounterBlock/CounterBlock";
 
-import {ReactComponent as Icon_right} from './assets/right_array.svg';
-import {ReactComponent as Icon_left} from './assets/left_array.svg';
+import {ReactComponent as IconRight} from './assets/right_array.svg';
+import {ReactComponent as IconLeft} from './assets/left_array.svg';
 
 
 const OLD_PRICE = 64.99;
@@ -26,11 +26,8 @@ export const XboxWC = () => {
     const [array] = useState(cards)
     const [color, setColor] = useState('white')
     const myArray = filterArray(array, color)
-
     const [selectArray, setSelectArray] = useState(myArray)
-
     const [adArray, setAdArray] = useState(ad_cards)
-
     const [textDescription, setTextDescription] = useState(descriptionText[0].text)
 
 
@@ -50,7 +47,8 @@ export const XboxWC = () => {
     }
 
     const pushItem = (array, counter) => {
-        for(let index = 0; index < array.length; index++) array[index].counter = counter
+       for(let index = 0; index < array.length; index++) array[index].counter = counter
+       for(let index = 0; index < array.length; index++) array[index].price = array[index].price * array[index].counter
        if(counter > 0) {
            for(let index = 0; index <= array.length; index++){
                if(array[index].enable === true) {
@@ -78,8 +76,8 @@ export const XboxWC = () => {
                             <img key={item.name} className={item.enable ? classes.img_enable : classes.img_disable} src={item.name} alt='card'/>
                         )})}
                         <div className={classes.arrow_row}>
-                            <Icon_left className={classes.left_arrow} onClick={() => handleSliderCards(selectArray, 'right')} />
-                            <Icon_right className={classes.right_arrow} onClick={() => handleSliderCards(selectArray, 'left')} />
+                            <IconLeft className={classes.left_arrow} onClick={() => handleSliderCards(selectArray, 'right')} />
+                            <IconRight className={classes.right_arrow} onClick={() => handleSliderCards(selectArray, 'left')} />
                         </div>
                 </div>
 
@@ -151,8 +149,8 @@ export const XboxWC = () => {
                     )})}
                 </div>
                 <div className={classes.ad_arrows}>
-                    <Icon_left className={classes.ad_icon_left} onClick={() => handleSliderAdCards(adArray, 'left')}/>
-                    <Icon_right className={classes.ad_icon_right} onClick={() => handleSliderAdCards(adArray, 'right')}/>
+                    <IconLeft className={classes.ad_icon_left} onClick={() => handleSliderAdCards(adArray, 'left')}/>
+                    <IconRight className={classes.ad_icon_right} onClick={() => handleSliderAdCards(adArray, 'right')}/>
                 </div>
 
             </div>

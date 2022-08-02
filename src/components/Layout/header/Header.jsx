@@ -22,8 +22,9 @@ const Header = () => {
     const sumPrice = (array) => {
         let result = 0;
         for(let index = 0; index < array.length; index++) {
-            result += array[index].price * array[index].counter;
+            result += array[index].price
         }
+        if(result > 0)  return result.toFixed(2)
         return result
     }
 

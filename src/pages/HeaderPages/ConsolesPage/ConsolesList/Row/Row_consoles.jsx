@@ -10,7 +10,7 @@ const RowConsoles = ({price}) => {
             {filteredConsoles.map((element) => {
                 return (
                     <div className={classes.card}>
-                        <Link to='/home'>
+                        <Link to='/xboxWC'>
                             <img src={element.image} alt='card'/>
                         </Link>
                         <form className={classes.card_description}>
