@@ -2,39 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+In this project, I implemented user interaction in an online store. At the moment, not all product pages are ready, but it will grow and expand.
 
-In the project directory, you can run:
+The first gif shows the start page of the site
+![Shop-gif_1](https://user-images.githubusercontent.com/58001922/182638038-97582e18-bff1-4514-8468-31276c24a17e.gif)
 
-### `npm start`
+When you enter an email in the modal window, a message will be sent to that email.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screenshot_1](https://user-images.githubusercontent.com/58001922/182638108-a94981d8-6189-4205-946d-4a34bfb7b44f.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+At the moment, only the button of the "Controllers" block works.
+Pagination and product filter work.
+![Shop-gif_2](https://user-images.githubusercontent.com/58001922/182638247-911e3d91-6d51-493d-ad24-5f2d57cc22c5.gif)
 
-### `npm test`
+The interaction of the user with the goods works, the choice of goods, colors, the correct calculation of the price. The repository is made with the Redux Toolkit.
+![Shop-gif_3](https://user-images.githubusercontent.com/58001922/182638255-eb766e8e-b3d0-408c-be42-b63a14545e09.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following images are shown not included in the gif
+![Contact-page](https://user-images.githubusercontent.com/58001922/182639486-5d55f994-f396-41c3-b3a4-8d27ba534017.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The development of the project is ongoing, stay tuned.
