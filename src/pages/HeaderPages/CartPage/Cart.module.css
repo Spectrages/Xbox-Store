@@ -56,7 +56,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 30px;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .total_block {

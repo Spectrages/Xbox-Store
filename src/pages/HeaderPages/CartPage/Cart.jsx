@@ -24,7 +24,7 @@ export const CartPage = () => {
                 <React.Fragment>
                     <Item items={store}/>
                     <div className={classes.buttons}>
-                        <Link to='/controllers'><button className={classes.myButton}>Continue shopping</button></Link>
+                        <Link style={{textDecoration:'none'}} to='/controllers'><button className={classes.myButton}>Continue shopping</button></Link>
                         <div className={classes.prices_block}>
                             <span className={classes.delivery_text}>Delivery Free</span>
                             <span className={classes.total_text}>Total <span className={classes.price_text}>${(sumPrice(store).toFixed(2))}</span></span>
@@ -35,7 +35,7 @@ export const CartPage = () => {
             ) : (
                 <React.Fragment>
                     <span className={classes.empty_text}>Your cart is empty.</span>
-                    <Link to='/controllers'> <button style={{marginTop: '250px'}} className={classes.myButton}>Continue shopping</button> </Link>
+                    <Link style={{textDecoration:'none'}} to='/controllers'> <button style={{marginTop: '250px'}} className={classes.myButton}>Continue shopping</button> </Link>
                 </React.Fragment>
             )}
         </div>

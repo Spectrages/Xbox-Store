@@ -13,6 +13,7 @@ import {ReactComponent as IconLeft} from './assets/left_array.svg';
 
 
 const OLD_PRICE = 64.99;
+const PRICE = 59.99;
 
 const filterArray = (array, color) => {
     return array.filter(item => item.color === color)
@@ -47,8 +48,8 @@ export const XboxWC = () => {
     }
 
     const pushItem = (array, counter) => {
-       for(let index = 0; index < array.length; index++) array[index].counter = counter
-       for(let index = 0; index < array.length; index++) array[index].price = array[index].price * array[index].counter
+       for(let index = 0; index < array.length; index++) array[index].itemCounter = counter
+       for(let index = 0; index < array.length; index++) array[index].price = array[index].price * array[index].itemCounter
        if(counter > 0) {
            for(let index = 0; index <= array.length; index++){
                if(array[index].enable === true) {
@@ -95,7 +96,7 @@ export const XboxWC = () => {
                     </div>
                    <CounterBlock/>
                     <div className={classes.prices_text}>
-                        <span className={classes.new_price_text}>${selectArray[0].price}</span>
+                        <span className={classes.new_price_text}>${PRICE}</span>
                         <span className={classes.old_price_text}>{OLD_PRICE}</span>
                     </div>
                     <div className={classes.button_position}>

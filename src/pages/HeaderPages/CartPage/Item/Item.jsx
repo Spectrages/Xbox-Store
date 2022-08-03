@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "./Item.module.scss";
 import {ReactComponent as Icon_remove} from "../assets/Cross.svg";
 import {ReactComponent as IconMinus} from "../../../PagesComponents/CounterBlock/assets/minus.svg";
@@ -24,7 +24,7 @@ const Item = ({items}) => {
 
                             <div className={classes.counter_block}>
                                 <IconMinus className={classes.icons} onClick={() => dispatch(CounterChangerDecrement(item, getId(item)))}/>
-                                <span className={classes.squad}>{item.counter}</span>
+                                <span className={classes.squad}>{item.itemCounter}</span>
                                 <IconPlus className={classes.icons} onClick={() => dispatch(CounterChangerIncrement(item, getId(item)))}/>
                             </div>
 

@@ -73,6 +73,7 @@
   height: 46px;
   flex-direction: row;
   align-items: center;
+  width: 1370px;
 }
 
 .filter{
@@ -84,7 +85,7 @@
   @include main_text_styles;
   color: #F9F9F9;
   font-size: 15px;
-  margin-left: 723px;
+  margin-left: 710px;
   margin-right: 8px;
 }
 
@@ -101,16 +102,16 @@
 
 .table_disable{
   fill: #0E5B0F;
-  margin-left: 64px;
+  margin-left: 62px;
 }
 
 .row_enable{
   fill: white;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 .row_disable{
   fill: #0E5B0F;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
 .price_range{
@@ -119,6 +120,7 @@
   color: #F9F9F9;
   font-size: 17px;
   width: 127px;
+  margin-left: 20px;
 }
 .input_style{
   position: relative;

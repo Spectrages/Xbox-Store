@@ -12,18 +12,20 @@ const toolkitSlice = createSlice({
     reducers: {
         addProduct(state, action) {
             state.store.push(action.payload)
+            state.counter = initialState.counter;
         },
         removeProduct(state, action) {
-            state.store = state.store.filter((item) => action.payload.id !== item.id)
+            state.store =  state.store.filter((item) => action.payload.id !== item.id);
+            state.counter = initialState.counter;
         },
 
         increment(state) {
-            state.counter = state.counter + 1
+            state.counter = state.counter + 1;
         },
 
         decrement(state) {
             if(state.counter > 0) {
-                state.counter  = state.counter - 1
+                state.counter  = state.counter - 1;
             }
         },
 
@@ -32,31 +34,31 @@ const toolkitSlice = createSlice({
                 let newPrice = price / (counter + 1)
                 if(counter <= 0) {
                     counter = 1;
-                    return newPrice*counter
+                    return newPrice*counter;
                 }
                 return (newPrice * counter);
             }
-            state.store.map((item) => ((item.id === action.payload.id) && (item.counter >= 1)) ?
-                (item.counter--) && (item.price = func(item.counter, item.price))
+            state.store.map((item) => ((item.id === action.payload.id) && (item.itemCounter >= 1)) ?
+                (item.itemCounter--) && (item.price = func(item.itemCounter, item.price))
                 : null
-            )
+            );
         },
 
         CounterChangerIncrement(state, action) {
 
             const func = (counter, price) => {
-                let newPrice = (price / (counter - 1))
-                return newPrice * counter
+                let newPrice = (price / (counter - 1));
+                return newPrice * counter;
             }
             state.store.map((item) => item.id === action.payload.id ?
-                (item.counter++) && (item.price = func(item.counter, item.price))
+                (item.itemCounter++) && (item.price = func(item.itemCounter, item.price))
                 : null
-            )
+            );
         },
     }
 })
 
-export default toolkitSlice.reducer
+export default toolkitSlice.reducer;
 export const {
     addProduct,
     removeProduct,
@@ -64,4 +66,4 @@ export const {
     decrement,
     CounterChangerDecrement,
     CounterChangerIncrement,
-                    } = toolkitSlice.actions
+                    } = toolkitSlice.actions;
