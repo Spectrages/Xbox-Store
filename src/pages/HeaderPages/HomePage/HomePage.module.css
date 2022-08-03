@@ -1,6 +1,6 @@
 .mainContainer {
   width: 1920px;
-  background: #F9F9F9;
+  background: white;
 }
 
 .mainContainer_first {
@@ -72,7 +72,7 @@
 
 .first_monoBlock {
   display: flex;
-  background: #EDEDED;
+  background: white;
 }
 
 .monoblock_text_1 {
@@ -109,7 +109,7 @@
 .second_monoBlock {
   display: flex;
   flex-direction: row-reverse;
-  background: #EDEDED;
+  background: white;
 }
 
 .monoBlock_image {

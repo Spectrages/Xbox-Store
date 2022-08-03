@@ -83,7 +83,7 @@
 
 .sort_text{
   @include main_text_styles;
-  color: #F9F9F9;
+  color: white;
   font-size: 15px;
   margin-left: 710px;
   margin-right: 8px;
@@ -91,7 +91,7 @@
 
 .selector_text{
   @include main_text_styles;
-  color: #F9F9F9;
+  color: white;
   font-size: 17px;
   font-weight: bold;
 }
