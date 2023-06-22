@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./Item.module.scss";
-import {ReactComponent as Icon_remove} from "../assets/Cross.svg";
+import {ReactComponent as IconRemove} from "../assets/Cross.svg";
 import {ReactComponent as IconMinus} from "../../../PagesComponents/CounterBlock/assets/minus.svg";
 import {CounterChangerIncrement, CounterChangerDecrement, removeProduct} from "../../../../toolkitRedux/toolkitSlicer";
 import {ReactComponent as IconPlus} from "../../../PagesComponents/CounterBlock/assets/plus.svg";
@@ -29,7 +29,7 @@ const Item = ({items}) => {
                             </div>
 
                             <span className={classes.item_price}>${(item.price).toFixed(2)}</span>
-                            <Icon_remove className={classes.remove_icon} onClick={() => dispatch(removeProduct(item, getId(item)))}/>
+                            <IconRemove className={classes.remove_icon} onClick={() => dispatch(removeProduct(item, getId(item)))}/>
                         </div>
                     </div>
                 )})}

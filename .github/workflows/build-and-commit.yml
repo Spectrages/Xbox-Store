@@ -3,7 +3,7 @@ name: Build and Commit
 on:
   push:
     branches-ignore:
-      - "main"
+      - "master"
 
 jobs:
   build-and-commit:

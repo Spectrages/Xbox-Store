@@ -1,4 +1,3 @@
-import React from "react";
 import card_1 from './assets/image 1.png'
 import card_2 from './assets/image 2.png'
 import card_3 from './assets/image 3.png'

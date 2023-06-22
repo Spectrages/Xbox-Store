@@ -15,7 +15,7 @@ import { ReturnsPage } from "./pages/FooterPages/ReturnsPage";
 import { TrackingPage } from "./pages/FooterPages/TrackingPage";
 import { LocationPage } from "./pages/FooterPages/LocationPage";
 import { NewsPage } from "./pages/FooterPages/NewsPage";
-import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
+// import { xboxSupportPage } from "./pages/FooterPages/xboxSupportPage"
 import { XboxSeriesX } from './pages/HeaderPages/ConsolesPage/Consoles/Xbox series X/main'
 import { XboxWC } from "./pages/HeaderPages/ConsolesPage/Consoles/Xbox Wireless Controller/main";
 import { CartPage } from "./pages/HeaderPages/CartPage/Cart";

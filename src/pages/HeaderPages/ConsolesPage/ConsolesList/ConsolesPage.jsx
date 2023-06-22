@@ -6,8 +6,8 @@ import {cards_table, cards_row} from './Cards'
 import TableConsoles from "./Table/Table_consoles";
 import RowConsoles from "./Row/Row_consoles";
 
-import {ReactComponent as Icon_1} from './assets/app-menu_1.svg'
-import {ReactComponent as Icon_2} from './assets/app-menu_2.svg';
+import {ReactComponent as IconFirst} from './assets/app-menu_1.svg'
+import {ReactComponent as IconSecond} from './assets/app-menu_2.svg';
 
 
 export const ConsolesPage = () => {
@@ -48,11 +48,11 @@ export const ConsolesPage = () => {
                     />
                     <span className={classes.sort_text}>Sort result by:</span>
                     <span className={classes.selector_text}>Selector</span>
-                    <Icon_1
+                    <IconFirst
                         className={filter ? classes.table_disable : classes.table_enable}
                         onClick={() => setFilter(false)}
                     />
-                    <Icon_2
+                    <IconSecond
                         className={filter ? classes.row_enable : classes.row_disable}
                         onClick={() => setFilter(true)}
                     />
